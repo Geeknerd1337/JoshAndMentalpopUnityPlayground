@@ -1,0 +1,441 @@
+fileFormatVersion: 2
+guid: 3f9eb4a4eae144d439bd84c427cf94f7
+timeCreated: 1554346011
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: All the Dark Grass
+    100002: All The Light Grass
+    100004: Big Rock
+    100006: Big Rock2
+    100008: Blueberry Flower
+    100010: BrokenTreeLeaves
+    100012: BrokenTreeTrunk
+    100014: Bush (1)
+    100016: Bush (1).001
+    100018: Bush (2)
+    100020: Bush (3)
+    100022: BushyTreeLeaves
+    100024: BushyTreeTrunk
+    100026: CatTail
+    100028: CatTails
+    100030: Cave Mushroom
+    100032: Cave Rocks
+    100034: Cone
+    100036: Curly Grass.001
+    100038: Curly Grass.002
+    100040: Curly Grass.003
+    100042: Curly Grass.003 (again)
+    100044: Curly Grass.004
+    100046: Cylinder
+    100048: Cylinder.001
+    100050: DeadTreeTrunk
+    100052: Dock
+    100054: Driftwood
+    100056: FlatRocks
+    100058: Flowers
+    100060: Ghostcap Mushroom
+    100062: GrassTuftsDark
+    100064: GrassTuftsLight
+    100066: Lantern
+    100068: Lily
+    100070: Lily Pads
+    100072: Mailbox
+    100074: Medium Rock
+    100076: Mushroom 3.002
+    100078: OverturnedDirt
+    100080: OverturnedDirt.001
+    100082: OverturnedDirt.002
+    100084: PineTreeLeaves
+    100086: PineTreeTrunk
+    100088: Plant Leaves and Grass
+    100090: Red Mushroom
+    100092: Rock
+    100094: Rock Trio
+    100096: Rock Trio.001
+    100098: Rock2
+    100100: Rock2.002
+    100102: Round Bushes
+    100104: Sapling
+    100106: Single Vine
+    100108: Single Vine.001
+    100110: Small Rock
+    100112: Stalags
+    100114: Stump
+    100116: Sun
+    100118: //RootNode
+    100120: Terrarium
+    100122: TolSnowTree1
+    100124: TolSnowTree2
+    100126: TolSnowTree3
+    100128: TolTreeTrunk1
+    100130: TolTreeTrunk2
+    100132: TolTreeTrunk3
+    100134: TolTreeTrunk4
+    100136: TolTreeTrunk5
+    100138: Underwater Rocks
+    100140: Vines
+    100142: Vines (2)
+    100144: Vines (Long)
+    100146: Vines (Long).001
+    400000: All the Dark Grass
+    400002: All The Light Grass
+    400004: Big Rock
+    400006: Big Rock2
+    400008: Blueberry Flower
+    400010: BrokenTreeLeaves
+    400012: BrokenTreeTrunk
+    400014: Bush (1)
+    400016: Bush (1).001
+    400018: Bush (2)
+    400020: Bush (3)
+    400022: BushyTreeLeaves
+    400024: BushyTreeTrunk
+    400026: CatTail
+    400028: CatTails
+    400030: Cave Mushroom
+    400032: Cave Rocks
+    400034: Cone
+    400036: Curly Grass.001
+    400038: Curly Grass.002
+    400040: Curly Grass.003
+    400042: Curly Grass.003 (again)
+    400044: Curly Grass.004
+    400046: Cylinder
+    400048: Cylinder.001
+    400050: DeadTreeTrunk
+    400052: Dock
+    400054: Driftwood
+    400056: FlatRocks
+    400058: Flowers
+    400060: Ghostcap Mushroom
+    400062: GrassTuftsDark
+    400064: GrassTuftsLight
+    400066: Lantern
+    400068: Lily
+    400070: Lily Pads
+    400072: Mailbox
+    400074: Medium Rock
+    400076: Mushroom 3.002
+    400078: OverturnedDirt
+    400080: OverturnedDirt.001
+    400082: OverturnedDirt.002
+    400084: PineTreeLeaves
+    400086: PineTreeTrunk
+    400088: Plant Leaves and Grass
+    400090: Red Mushroom
+    400092: Rock
+    400094: Rock Trio
+    400096: Rock Trio.001
+    400098: Rock2
+    400100: Rock2.002
+    400102: Round Bushes
+    400104: Sapling
+    400106: Single Vine
+    400108: Single Vine.001
+    400110: Small Rock
+    400112: Stalags
+    400114: Stump
+    400116: Sun
+    400118: //RootNode
+    400120: Terrarium
+    400122: TolSnowTree1
+    400124: TolSnowTree2
+    400126: TolSnowTree3
+    400128: TolTreeTrunk1
+    400130: TolTreeTrunk2
+    400132: TolTreeTrunk3
+    400134: TolTreeTrunk4
+    400136: TolTreeTrunk5
+    400138: Underwater Rocks
+    400140: Vines
+    400142: Vines (2)
+    400144: Vines (Long)
+    400146: Vines (Long).001
+    2300000: All the Dark Grass
+    2300002: All The Light Grass
+    2300004: Big Rock
+    2300006: Big Rock2
+    2300008: Blueberry Flower
+    2300010: BrokenTreeLeaves
+    2300012: BrokenTreeTrunk
+    2300014: Bush (1)
+    2300016: Bush (1).001
+    2300018: Bush (2)
+    2300020: Bush (3)
+    2300022: BushyTreeLeaves
+    2300024: BushyTreeTrunk
+    2300026: CatTail
+    2300028: CatTails
+    2300030: Cave Mushroom
+    2300032: Cave Rocks
+    2300034: Cone
+    2300036: Curly Grass.001
+    2300038: Curly Grass.002
+    2300040: Curly Grass.003
+    2300042: Curly Grass.003 (again)
+    2300044: Curly Grass.004
+    2300046: Cylinder
+    2300048: Cylinder.001
+    2300050: DeadTreeTrunk
+    2300052: Dock
+    2300054: Driftwood
+    2300056: FlatRocks
+    2300058: Flowers
+    2300060: Ghostcap Mushroom
+    2300062: GrassTuftsDark
+    2300064: GrassTuftsLight
+    2300066: Lantern
+    2300068: Lily
+    2300070: Lily Pads
+    2300072: Mailbox
+    2300074: Medium Rock
+    2300076: Mushroom 3.002
+    2300078: OverturnedDirt
+    2300080: OverturnedDirt.001
+    2300082: OverturnedDirt.002
+    2300084: PineTreeLeaves
+    2300086: PineTreeTrunk
+    2300088: Plant Leaves and Grass
+    2300090: Red Mushroom
+    2300092: Rock
+    2300094: Rock Trio
+    2300096: Rock Trio.001
+    2300098: Rock2
+    2300100: Rock2.002
+    2300102: Round Bushes
+    2300104: Sapling
+    2300106: Single Vine
+    2300108: Single Vine.001
+    2300110: Small Rock
+    2300112: Stalags
+    2300114: Stump
+    2300116: Terrarium
+    2300118: TolSnowTree1
+    2300120: TolSnowTree2
+    2300122: TolSnowTree3
+    2300124: TolTreeTrunk1
+    2300126: TolTreeTrunk2
+    2300128: TolTreeTrunk3
+    2300130: TolTreeTrunk4
+    2300132: TolTreeTrunk5
+    2300134: Underwater Rocks
+    2300136: Vines
+    2300138: Vines (2)
+    2300140: Vines (Long)
+    2300142: Vines (Long).001
+    3300000: All the Dark Grass
+    3300002: All The Light Grass
+    3300004: Big Rock
+    3300006: Big Rock2
+    3300008: Blueberry Flower
+    3300010: BrokenTreeLeaves
+    3300012: BrokenTreeTrunk
+    3300014: Bush (1)
+    3300016: Bush (1).001
+    3300018: Bush (2)
+    3300020: Bush (3)
+    3300022: BushyTreeLeaves
+    3300024: BushyTreeTrunk
+    3300026: CatTail
+    3300028: CatTails
+    3300030: Cave Mushroom
+    3300032: Cave Rocks
+    3300034: Cone
+    3300036: Curly Grass.001
+    3300038: Curly Grass.002
+    3300040: Curly Grass.003
+    3300042: Curly Grass.003 (again)
+    3300044: Curly Grass.004
+    3300046: Cylinder
+    3300048: Cylinder.001
+    3300050: DeadTreeTrunk
+    3300052: Dock
+    3300054: Driftwood
+    3300056: FlatRocks
+    3300058: Flowers
+    3300060: Ghostcap Mushroom
+    3300062: GrassTuftsDark
+    3300064: GrassTuftsLight
+    3300066: Lantern
+    3300068: Lily
+    3300070: Lily Pads
+    3300072: Mailbox
+    3300074: Medium Rock
+    3300076: Mushroom 3.002
+    3300078: OverturnedDirt
+    3300080: OverturnedDirt.001
+    3300082: OverturnedDirt.002
+    3300084: PineTreeLeaves
+    3300086: PineTreeTrunk
+    3300088: Plant Leaves and Grass
+    3300090: Red Mushroom
+    3300092: Rock
+    3300094: Rock Trio
+    3300096: Rock Trio.001
+    3300098: Rock2
+    3300100: Rock2.002
+    3300102: Round Bushes
+    3300104: Sapling
+    3300106: Single Vine
+    3300108: Single Vine.001
+    3300110: Small Rock
+    3300112: Stalags
+    3300114: Stump
+    3300116: Terrarium
+    3300118: TolSnowTree1
+    3300120: TolSnowTree2
+    3300122: TolSnowTree3
+    3300124: TolTreeTrunk1
+    3300126: TolTreeTrunk2
+    3300128: TolTreeTrunk3
+    3300130: TolTreeTrunk4
+    3300132: TolTreeTrunk5
+    3300134: Underwater Rocks
+    3300136: Vines
+    3300138: Vines (2)
+    3300140: Vines (Long)
+    3300142: Vines (Long).001
+    4300000: Terrarium
+    4300002: Round Bushes
+    4300004: Small Rock
+    4300006: Medium Rock
+    4300008: Big Rock
+    4300010: Big Rock2
+    4300012: PineTreeLeaves
+    4300014: BushyTreeTrunk
+    4300016: PineTreeTrunk
+    4300018: Lantern
+    4300020: BrokenTreeTrunk
+    4300022: BrokenTreeLeaves
+    4300024: BushyTreeLeaves
+    4300026: Driftwood
+    4300028: TolTreeTrunk5
+    4300030: DeadTreeTrunk
+    4300032: TolTreeTrunk2
+    4300034: TolTreeTrunk1
+    4300036: TolTreeTrunk3
+    4300038: TolTreeTrunk4
+    4300040: TolSnowTree1
+    4300042: TolSnowTree2
+    4300044: TolSnowTree3
+    4300046: Cylinder.001
+    4300048: Stump
+    4300050: Mailbox
+    4300052: Rock
+    4300054: Rock2
+    4300056: Rock Trio
+    4300058: Rock2.002
+    4300060: FlatRocks
+    4300062: Rock Trio.001
+    4300064: Cave Rocks
+    4300066: Underwater Rocks
+    4300068: Plant Leaves and Grass
+    4300070: GrassTuftsDark
+    4300072: GrassTuftsLight
+    4300074: CatTail
+    4300076: CatTails
+    4300078: All The Light Grass
+    4300080: All the Dark Grass
+    4300082: Lily
+    4300084: Lily Pads
+    4300086: Flowers
+    4300088: Cone
+    4300090: Curly Grass.001
+    4300092: Curly Grass.002
+    4300094: Curly Grass.003
+    4300096: Curly Grass.003 (again)
+    4300098: Curly Grass.004
+    4300100: OverturnedDirt
+    4300102: OverturnedDirt.001
+    4300104: OverturnedDirt.002
+    4300106: Cylinder
+    4300108: Sapling
+    4300110: Blueberry Flower
+    4300112: Cave Mushroom
+    4300114: Red Mushroom
+    4300116: Ghostcap Mushroom
+    4300118: Mushroom 3.002
+    4300120: Stalags
+    4300122: Single Vine.001
+    4300124: Vines
+    4300126: Vines (2)
+    4300128: Bush (1)
+    4300130: Bush (3)
+    4300132: Bush (2)
+    4300134: Vines (Long)
+    4300136: Bush (1).001
+    4300138: Vines (Long).001
+    4300140: Single Vine
+    4300142: Dock
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
