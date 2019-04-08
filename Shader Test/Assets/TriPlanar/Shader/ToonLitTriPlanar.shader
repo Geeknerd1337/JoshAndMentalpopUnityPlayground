@@ -13,6 +13,7 @@
 		_RimPower("Rim Power", Range(-2,20)) = 1
 		_RimColor("Rim Color Top", Color) = (0.5,0.5,0.5,1)
 		_RimColor2("Rim Color Side/Bottom", Color) = (0.5,0.5,0.5,1)
+		Precision ("Precision", Range(0.0, 0.5)) = 0.02
 	}
 
 		SubShader{
@@ -23,7 +24,7 @@
 #pragma surface surf ToonRamp
 
 		sampler2D _Ramp;
-
+		float Precision;
 	// custom lighting function that uses a texture ramp based
 	// on angle between light direction and normal
 #pragma lighting ToonRamp exclude_path:prepass
@@ -37,6 +38,7 @@
 		half3 ramp = tex2D(_Ramp, float2(d,d)).rgb;
 
 		half4 c;
+		atten = floor(atten/Precision) * Precision;
 		c.rgb = s.Albedo * _LightColor0.rgb * ramp * (atten * 2);
 		c.a = 0;
 		return c;
