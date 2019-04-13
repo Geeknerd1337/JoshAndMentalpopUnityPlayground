@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 2e2b8224c5f47b14e9baea5e550f0820
-timeCreated: 1555040210
+guid: 789ee9f6973ae8f4d90b0b26e0c0d2a2
+timeCreated: 1555139908
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube.004
+    4300000: Mountains
   materials:
     importMaterials: 1
     materialName: 0
@@ -36,7 +36,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.8
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

@@ -422,24 +422,24 @@ MonoBehaviour:
     width: 202
     height: 926
   m_TreeViewState:
-    scrollPos: {x: 0, y: 403}
-    m_SelectedIDs: 2ef9ffff
-    m_LastClickedID: -1746
-    m_ExpandedIDs: f66fffff40d1ffffd8fbffff00000000103100001e310000d43300003e360000
+    scrollPos: {x: 0, y: 387}
+    m_SelectedIDs: 642f0000
+    m_LastClickedID: 12132
+    m_ExpandedIDs: d8fbffff000000001c31000040320000e83300007c34000052360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: GameObject
-      m_OriginalName: GameObject
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -36874
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
@@ -518,19 +518,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Models/Homes
+    - Assets/Models/Mountains/Meshes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models/Homes
+  - Assets/Models/Mountains/Meshes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: G:\Unity\JoshAndMentalpopUnityPlayground\Shader Test
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: ea260000
-    m_LastClickedID: 9962
-    m_ExpandedIDs: 00000000fa2400004c250000802500002226000052260000b6260000e6260000ea260000c8280000342a0000502a00006a2a0000b62a00002c2b0000682b0000002c0000222c0000322c0000c22c00002a3a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 179}
+    m_SelectedIDs: d42a0000
+    m_LastClickedID: 10964
+    m_ExpandedIDs: 00000000fa2400004c250000802500002226000052260000b6260000e6260000ea260000cc280000382a0000542a00006e2a0000ba2a0000302b00006c2b0000042c0000262c0000362c0000c62c0000403a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -558,7 +558,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa2400004c250000802500002226000052260000b6260000e6260000ea260000c8280000342a0000502a00006a2a0000b62a00002c2b0000682b0000002c0000222c0000322c0000c22c00002a3a0000
+    m_ExpandedIDs: 00000000fa2400004c250000802500002226000052260000b6260000e6260000ea260000cc280000382a0000542a00006e2a0000ba2a0000302b00006c2b0000042c0000262c0000362c0000c62c0000403a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -716,14 +716,14 @@ MonoBehaviour:
     width: 1350
     height: 651
   m_SceneLighting: 1
-  lastFramingTime: 508.17389234101614
+  lastFramingTime: 1438.881917372218
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.676598, y: -50.313034, z: -106.86672}
+    m_Target: {x: 11.25943, y: -68.60324, z: -110.98081}
     speed: 2
-    m_Value: {x: 12.676598, y: -50.313034, z: -106.86672}
+    m_Value: {x: 11.25943, y: -68.60324, z: -110.98081}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -746,13 +746,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.10384532, y: 0.8764488, z: -0.21867202, w: -0.4162165}
+    m_Target: {x: -0.19862226, y: 0.5796718, z: -0.14832737, w: -0.7762273}
     speed: 2
-    m_Value: {x: -0.10384532, y: 0.8764488, z: -0.21867202, w: -0.4162165}
+    m_Value: {x: -0.19862226, y: 0.5796718, z: -0.14832737, w: -0.7762273}
   m_Size:
-    m_Target: 47.749752
+    m_Target: 79.242485
     speed: 2
-    m_Value: 47.749752
+    m_Value: 79.242485
   m_Ortho:
     m_Target: 0
     speed: 2
