@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripting\Messages System\MessageMaster.cs" />
     <Compile Include="Assets\Scripting\Messages System\MessageTrigger.cs" />
     <Compile Include="Assets\TriPlanar\Scripts\Merge.cs" />
+    <Compile Include="Assets\sumPause\Scripts\SumPause.cs" />
     <Compile Include="Assets\vThirdPersonAnimator.cs" />
     <Compile Include="Assets\vThirdPersonController.cs" />
     <Compile Include="Assets\vThirdPersonInput.cs" />
@@ -119,6 +120,7 @@
     <None Include="Assets\TerrainSplatmapCustom.cginc" />
     <None Include="Assets\TriPlanar\Shader\ToonLitMerge.shader" />
     <None Include="Assets\TriPlanar\Shader\ToonLitTriPlanar.shader" />
+    <None Include="Assets\sumPause\README.md.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
