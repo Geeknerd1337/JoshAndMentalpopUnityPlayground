@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: bb5f9cdc3b9f7fb40a856ca793c5933e
-timeCreated: 1555697395
+guid: d7be773b736bf8945bf1287efe82a43e
+timeCreated: 1555729275
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: CubeHome
+    4300000: Well Lit Cube Home.001
   materials:
     importMaterials: 1
     materialName: 0
