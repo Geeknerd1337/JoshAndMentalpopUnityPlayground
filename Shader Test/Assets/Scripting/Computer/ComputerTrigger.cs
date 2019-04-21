@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-//using Invector.CharacterController;
+using Invector.CharacterController;
 using UnityEngine;
 
 public class ComputerTrigger : MonoBehaviour {
 
-    public GameObject player;
+    public vThirdPersonController player;
     public Camera playerCamera;
     [SerializeField]
     private Camera myCamera;
@@ -28,7 +28,7 @@ public class ComputerTrigger : MonoBehaviour {
             {
                 myCamera.enabled = true;
                 playerCamera.enabled = false;
-                player.SetActive(false);
+                player.enabled = false;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
             }
@@ -58,7 +58,7 @@ public class ComputerTrigger : MonoBehaviour {
     {
         myCamera.enabled = false;
         playerCamera.enabled = true;
-        player.SetActive(true);
+        player.enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }

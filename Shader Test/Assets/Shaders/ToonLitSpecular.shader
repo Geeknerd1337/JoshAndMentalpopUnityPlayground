@@ -15,6 +15,8 @@ Shader "Toon/Lit Specular" {
 	  [Toggle(FADE)] _FADE("Fade specular to bottom?", Float) = 0
 	  _TopBottomOffset("Specular Fade Offset", Range(-4,4)) = 3.2
 	   Precision ("My range", Range(0.0, 0.5)) = 0.02
+	   DirectionalBands ("My range", Range(1, 50)) = 4
+	   [Toggle(USERAMP)] _UseRamp("Don't use Ramp?", Float) = 0
 	}
 
 	SubShader {
@@ -25,8 +27,10 @@ CGPROGRAM
 #pragma surface surf ToonRamp vertex:vert 
 #pragma shader_feature FADE // fade toggle
 #pragma shader_feature RIM // rim fresnel toggle
+#pragma shader_feature USERAMP // rim fresnel toggle
 sampler2D _Ramp;
  float Precision;
+  float DirectionalBands;
 
 // custom lighting function that uses a texture ramp based
 // on angle between light direction and normal
@@ -42,9 +46,18 @@ inline half4 LightingToonRamp (SurfaceOutput s, half3 lightDir, half atten)
 
 	
 	half4 c;
+
+	#if USERAMP
+	d = dot (s.Normal, lightDir);
+	d = floor(d/(1/DirectionalBands)) * (1/DirectionalBands);
+	#endif
+
 	atten = floor(atten/Precision) * Precision;
 	c.rgb =  _LightColor0.rgb * (s.Albedo * ramp * (atten * 2));
 	c.a = 0;
+	#if USERAMP
+	c.rgb = _LightColor0.rgb * (s.Albedo * d * (atten * 2));
+	#endif
 	return c;
 }
 
