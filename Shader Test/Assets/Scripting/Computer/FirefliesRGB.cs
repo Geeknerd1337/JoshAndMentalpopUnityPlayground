@@ -34,6 +34,7 @@ public class FirefliesRGB : MonoBehaviour {
         {
             var main = p.main;
             main.startColor = i.color;
+            p.gameObject.GetComponentInChildren<Light>().color = i.color;
         }
     }
 }
