@@ -129,8 +129,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 947
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -344,24 +344,24 @@ MonoBehaviour:
     width: 202
     height: 926
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 96e8ffff
-    m_LastClickedID: -5994
-    m_ExpandedIDs: d8fbffff0000000086340000563a0000a43a0000
+    scrollPos: {x: 0, y: 515}
+    m_SelectedIDs: 84d8ffff
+    m_LastClickedID: -10108
+    m_ExpandedIDs: 2c68ffffd8fbffff000000008a3400005a3a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Prop_Table_Modern
-      m_OriginalName: Prop_Table_Modern
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 15900
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -397,14 +397,14 @@ MonoBehaviour:
     width: 1350
     height: 650
   m_SceneLighting: 1
-  lastFramingTime: 58111.102964880665
+  lastFramingTime: 755.4355303198231
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 25.122643, y: -65.017265, z: -30.34744}
+    m_Target: {x: 43.164482, y: -60.613586, z: -59.894684}
     speed: 2
-    m_Value: {x: 25.122643, y: -65.017265, z: -30.34744}
+    m_Value: {x: 43.164482, y: -60.613586, z: -59.894684}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -427,13 +427,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.10749441, y: 0.4417188, z: -0.05340405, w: -0.88908803}
+    m_Target: {x: 0.20160432, y: -0.43171236, z: 0.099634625, w: 0.8735291}
     speed: 2
-    m_Value: {x: -0.10749441, y: 0.4417188, z: -0.05340405, w: -0.88908803}
+    m_Value: {x: 0.20160432, y: -0.43171236, z: 0.099634625, w: 0.8735291}
   m_Size:
-    m_Target: 57.97451
+    m_Target: 38.21366
     speed: 2
-    m_Value: 57.97451
+    m_Value: 38.21366
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -556,19 +556,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Objects/Buildings/Meshes
+    - Assets/Objects/Pee
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Objects/Buildings/Meshes
+  - Assets/Objects/Pee
   m_LastFoldersGridSize: -1
   m_LastProjectPath: G:\Unity\JoshAndMentalpopUnityPlayground\Shader Test
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 226}
-    m_SelectedIDs: 1e2b0000
-    m_LastClickedID: 11038
-    m_ExpandedIDs: 000000003826000066260000bc260000f6260000e22700007c280000d42800000e290000662a0000b02c0000d42c0000422d0000002e00005c2e00001e2f0000922f0000a42f000020300000663000007443000076430000784300007a43000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 390}
+    m_SelectedIDs: 1a280000
+    m_LastClickedID: 10266
+    m_ExpandedIDs: 000000003826000066260000bc260000f6260000e22700007c280000d42800000e290000662a0000b02c0000d42c0000422d0000002e00005c2e00001e2f0000922f0000a82f0000243000006a300000784300007a4300007c4300007e43000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -596,7 +596,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003826000066260000bc260000f6260000e22700007c280000d42800000e290000662a0000b02c0000d42c0000422d0000002e00005c2e00001e2f0000922f0000a42f000020300000663000007443000076430000784300007a430000
+    m_ExpandedIDs: 000000003826000066260000bc260000f6260000e22700007c280000d42800000e290000662a0000b02c0000d42c0000422d0000002e00005c2e00001e2f0000922f0000a82f0000243000006a300000784300007a4300007c4300007e430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -731,7 +731,7 @@ MonoBehaviour:
     y: 92
     width: 360
     height: 926
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 356.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 226

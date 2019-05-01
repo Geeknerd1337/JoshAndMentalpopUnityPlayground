@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8f92a9708c723034e9b6ec87964dad1f
-timeCreated: 1556679148
+guid: f52ec10d4a946df4fb8694976fa642f6
+timeCreated: 1556679561
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Radar Guy
+    4300000: Rug_Bluee.003
   materials:
     importMaterials: 1
     materialName: 0

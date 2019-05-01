@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8f92a9708c723034e9b6ec87964dad1f
-timeCreated: 1556679148
+guid: 566eb30b648711947b4612dfb0928cd1
+timeCreated: 1556679721
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Radar Guy
+    4300000: Tapestry_Purple
   materials:
     importMaterials: 1
     materialName: 0
