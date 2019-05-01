@@ -105,6 +105,14 @@
     <Compile Include="Assets\Scripting\Messages System\Message.cs" />
     <Compile Include="Assets\Scripting\Messages System\MessageMaster.cs" />
     <Compile Include="Assets\Scripting\Messages System\MessageTrigger.cs" />
+    <Compile Include="Assets\VirtualSnapshot\Scripts\DemoScripts\DemoCameraTargetScript.cs" />
+    <Compile Include="Assets\VirtualSnapshot\Scripts\DemoScripts\DemoLevelScript.cs" />
+    <Compile Include="Assets\VirtualSnapshot\Scripts\DemoScripts\DemoLevelWarpScript.cs" />
+    <Compile Include="Assets\VirtualSnapshot\Scripts\DemoScripts\DemoTargetCaptureSignScript.cs" />
+    <Compile Include="Assets\VirtualSnapshot\Scripts\VirtualSnapshotScript.cs" />
+    <Compile Include="Assets\VirtualSnapshot\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotorScript.cs" />
+    <Compile Include="Assets\VirtualSnapshot\Standard Assets\Character Controllers\Sources\Scripts\FPSInputControllerScript.cs" />
+    <Compile Include="Assets\VirtualSnapshot\Standard Assets\Character Controllers\Sources\Scripts\MouseLookScript.cs" />
     <Compile Include="Assets\sumPause\Scripts\SumPause.cs" />
     <Compile Include="Assets\vThirdPersonAnimator.cs" />
     <Compile Include="Assets\vThirdPersonController.cs" />
@@ -200,6 +208,7 @@
     <None Include="Assets\StandardTriplanar.shader" />
     <None Include="Assets\TerrainSplatmapCustom.cginc" />
     <None Include="Assets\Textures\Render Textures\BlackAndWhite.shader" />
+    <None Include="Assets\VirtualSnapshot\README.txt" />
     <None Include="Assets\sumPause\README.md.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

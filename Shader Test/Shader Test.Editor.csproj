@@ -254,6 +254,7 @@
     <None Include="Assets\StandardTriplanar.shader" />
     <None Include="Assets\TerrainSplatmapCustom.cginc" />
     <None Include="Assets\Textures\Render Textures\BlackAndWhite.shader" />
+    <None Include="Assets\VirtualSnapshot\README.txt" />
     <None Include="Assets\sumPause\README.md.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
