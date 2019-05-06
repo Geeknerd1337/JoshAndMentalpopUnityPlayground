@@ -127,9 +127,14 @@
   <ItemGroup>
     <None Include="Assets\Hologram\Shaders\FXHologramExtra.shader" />
     <None Include="Assets\Hologram\Shaders\FXHologramExtraXRay.shader" />
+    <None Include="Assets\Iridescence\Shader\ToonLitIrridenscent.shader" />
+    <None Include="Assets\Iridescence\Shader\ToonLitIrridenscentMasked.shader" />
     <None Include="Assets\Junk (but possibly in use)\Invector-3rdPersonController\Basic Locomotion LITE\README_Basic.txt" />
     <None Include="Assets\Junk (but possibly in use)\TriPlanar\Shader\ToonLitMerge.shader" />
     <None Include="Assets\Junk (but possibly in use)\TriPlanar\Shader\ToonLitTriPlanar.shader" />
+    <None Include="Assets\MovingGrass\Shader\ToonLitSwaying.shader" />
+    <None Include="Assets\NoiseOutline\Shaders\Aquarel.shader" />
+    <None Include="Assets\NoiseOutline\Shaders\ToonBasicOutlineSketch.shader" />
     <None Include="Assets\Shaders\ToonLitSpecular.shader" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort 1.shader" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
