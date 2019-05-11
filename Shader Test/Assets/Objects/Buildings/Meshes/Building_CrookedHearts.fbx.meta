@@ -6,9 +6,13 @@ ModelImporter:
     100000: //RootNode
     100002: Cube.051
     100004: Wall
+    100006: Wall.003
+    100008: Wall.005
     400000: //RootNode
     400002: Cube.051
     400004: Wall
+    400006: Wall.003
+    400008: Wall.005
     2100000: Palette Specials
     2100002: Pink Light
     2100004: HotPinkLight
@@ -18,10 +22,16 @@ ModelImporter:
     2100012: Palette Stones
     2300000: Cube.051
     2300002: Wall
+    2300004: Wall.003
+    2300006: Wall.005
     3300000: Cube.051
     3300002: Wall
+    3300004: Wall.003
+    3300006: Wall.005
     4300000: Cube.051
     4300002: Wall
+    4300004: Wall.005
+    4300006: Wall.003
   externalObjects:
   - first:
       type: UnityEngine:Material
