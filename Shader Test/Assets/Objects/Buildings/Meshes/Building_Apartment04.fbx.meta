@@ -6,10 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: Palette Specials
-    2100002: Palette Stones
-    2100004: Pink Light
-    2100006: Material
-    2100008: Window Light
+    2100002: PurpleDerpleLight
+    2100004: Material
+    2100006: Window Light
+    2100008: Palette Stones
     2100010: Glass
     2100012: Palette Greens
     2100014: Blue Light
@@ -17,7 +17,7 @@ ModelImporter:
     2100018: Palette Browns
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube.026
+    4300000: Cube.138
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
@@ -29,7 +29,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Glass
-    second: {fileID: 2100000, guid: 9f174a3123bccc243b20c057b48daa32, type: 2}
+    second: {fileID: 2100010, guid: f0238d6b2e448f948a44132c1b2668d6, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -63,13 +63,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Pink Light
-    second: {fileID: 2100000, guid: f1b864c357042174ab1b4faf90e1446c, type: 2}
+      name: PurpleDerpleLight
+    second: {fileID: 2100000, guid: a8293bdce5e3b4e43aa46a83dc5d3c22, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Window Light
-    second: {fileID: 2100000, guid: 4108a1c1b7f9f154ca86723bb1cf9366, type: 2}
+    second: {fileID: 2100000, guid: fefab4d045e8287459ab4d0cd7be13f4, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
