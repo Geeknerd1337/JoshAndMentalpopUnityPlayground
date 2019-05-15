@@ -7,6 +7,9 @@ public class Item : ScriptableObject {
     public Sprite icon = null;
     public bool isDefaultItem = false;
     public bool consumable = false;
+    public GameObject model = null;
+    public float itemYOffset;
+    public float itemScale;
 
     [TextArea(3,10)]
     public string description = "Item Description";

@@ -29,9 +29,10 @@ public class ToolTip : MonoBehaviour {
 
 
 
+
     public void ToggleMe(Item i, Transform t, InventorySlot s)
     {
-        transform.position = new Vector3(t.position.x + 288.85f/2, t.position.y + 176.6f/2);
+        transform.localPosition = new Vector3(t.localPosition.x + 288.6f/2, t.localPosition.y - 176.5f/2, -50.0f);
         
         itemName.text = i.name;
         itemDescription.text = i.description;

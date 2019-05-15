@@ -9,6 +9,8 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     [SerializeField]
     public ToolTip tip;
+    public GameObject modelTransform;
+    private GameObject model = null;
 
 
 
@@ -24,6 +26,16 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         item = newItem;
 
         icon.sprite = item.icon;
+
+        if (model == null)
+        {
+            model = Instantiate(item.model, modelTransform.transform);
+            model.transform.localPosition = new Vector3(0, 0 + item.itemYOffset, 0);
+            model.layer = 5;
+            model.transform.localScale = new Vector3(item.itemScale, item.itemScale, item.itemScale);
+
+
+        }
         icon.enabled = true;
         //removeButton.interactable = true;
         
@@ -35,6 +47,8 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         item = null;
         icon.sprite = null;
         icon.enabled = false;
+        Destroy(model);
+        model = null;
         //removeButton.interactable = false;
     }
 
