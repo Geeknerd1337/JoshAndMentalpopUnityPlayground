@@ -60,6 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Editor\RadialProgressBarEditor.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Editor\SimpleRadialProgressBarEditor.cs" />
     <Compile Include="Assets\AdultLink\TexturePanner\Editor\TexturePannerEditor.cs" />
     <Compile Include="Assets\AdultLink\TexturePanner\Editor\TexturePannerEditor_opaque.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Actions\ActionData.cs" />

@@ -60,10 +60,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AdultLink\TexturePanner\Examples\Scripts\CameraController.cs" />
-    <Compile Include="Assets\AdultLink\TexturePanner\Examples\Scripts\CameraPositions.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Destination\DestinationBar.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\HPBar\HPBar.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Loading\Loading.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Loading\Loading_inner.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Picture\PictureBar.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Rainbow\Rainbow.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Rainbow\RainbowStrip.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\RainbowRing\RainbowRing1.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\RainbowRing\RainbowRing2.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Rankup\RankupBar.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Revive\HealBar.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Speed\SpeedBar.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Utility\Camera\CameraController.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Utility\Camera\CameraPositions.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Utility\Camera\Index.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Utility\Float.cs" />
+    <Compile Include="Assets\AdultLink\RadialProgressBar\Examples\Scripts\Utility\Rotate.cs" />
     <Compile Include="Assets\AdultLink\TexturePanner\Examples\Scripts\HueShift.cs" />
-    <Compile Include="Assets\AdultLink\TexturePanner\Examples\Scripts\Index.cs" />
     <Compile Include="Assets\AdultLink\TexturePanner\Examples\Scripts\SetColor.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Examples\Community\ForceShield\ForceShieldDestroyBall.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Examples\Community\ForceShield\ForceShieldImpactDetection.cs" />
@@ -196,6 +210,7 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Templates\Legacy\DefaultUnlit.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
+    <None Include="Assets\AdultLink\RadialProgressBar\RadialProgressBar.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleMaxOp.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RotatorNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DecodeFloatRGBAHlpNode.shader" />
@@ -290,6 +305,7 @@
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCPixelateUV.shader" />
     <None Include="Assets\Junk (but possibly in use)\TriPlanar\Shader\ToonLitTriPlanar.shader" />
+    <None Include="Assets\AdultLink\RadialProgressBar\SimpleRadialProgressBar.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Exp2OpNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DotProductOpNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\TwoSidedWithFace\TwoSideWithFace.shader" />
@@ -317,6 +333,7 @@
     <None Include="Assets\AmplifyShaderEditor\Examples\Community\ForceShield\Credits.txt" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\ScreenSpaceCurvature\ScreenSpaceCurvature.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ParallaxMappingNode.shader" />
+    <None Include="Assets\AdultLink\RadialProgressBar\RadialProgressBar_UI.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\AnimatedFire\AnimatedFire.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleBlur\SimpleBlur.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareNotEqual.shader" />
@@ -381,6 +398,7 @@
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_AppendNode.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\CustomRTRain\Readme.txt" />
+    <None Include="Assets\AdultLink\RadialProgressBar\SimpleRadialProgressBar_UI.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TanhOpNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_BreakToComponentsNode.shader" />
     <None Include="Assets\StandardTriplanar.shader" />
