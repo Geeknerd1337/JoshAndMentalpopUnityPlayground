@@ -30,7 +30,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (model == null)
         {
             model = Instantiate(item.model, modelTransform.transform);
-            model.transform.localPosition = new Vector3(0, 0 + item.itemYOffset, 0);
+            model.transform.localPosition = new Vector3(0 + item.itemXOffset, 0 + item.itemYOffset, 0);
             model.layer = 5;
             model.transform.localScale = new Vector3(item.itemScale, item.itemScale, item.itemScale);
 

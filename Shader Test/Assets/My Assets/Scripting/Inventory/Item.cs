@@ -9,6 +9,7 @@ public class Item : ScriptableObject {
     public bool consumable = false;
     public GameObject model = null;
     public float itemYOffset;
+    public float itemXOffset;
     public float itemScale;
 
     [TextArea(3,10)]
