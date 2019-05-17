@@ -24,7 +24,7 @@ Shader "Toon/Lit Specular" {
 		LOD 200
 		
 CGPROGRAM
-#pragma surface surf ToonRamp vertex:vert 
+#pragma surface surf ToonRamp fullforwardshadows vertex:vert   
 #pragma shader_feature FADE // fade toggle
 #pragma shader_feature RIM // rim fresnel toggle
 #pragma shader_feature USERAMP // rim fresnel toggle
@@ -34,7 +34,7 @@ sampler2D _Ramp;
 
 // custom lighting function that uses a texture ramp based
 // on angle between light direction and normal
-#pragma lighting ToonRamp exclude_path:prepass
+#pragma lighting ToonRamp exclude_path:prepass fullforwardshadows
 inline half4 LightingToonRamp (SurfaceOutput s, half3 lightDir, half atten)
 {
 	#ifndef USING_DIRECTIONAL_LIGHT
@@ -42,7 +42,12 @@ inline half4 LightingToonRamp (SurfaceOutput s, half3 lightDir, half atten)
 	#endif
 	
 	half d = dot (s.Normal, lightDir)*0.5 + 0.5;
+	//d = (dot (s.Normal, lightDir)*0.5 + 0.5) * atten;
 	half3 ramp = tex2D (_Ramp, float2(d,d)).rgb;
+
+	 half NdotL = dot(s.Normal, lightDir); 
+
+	 NdotL = floor(NdotL/Precision) * Precision;
 
 	
 	half4 c;
@@ -53,12 +58,15 @@ inline half4 LightingToonRamp (SurfaceOutput s, half3 lightDir, half atten)
 	#endif
 
 	atten = floor(atten/Precision) * Precision;
-	c.rgb =  _LightColor0.rgb * (s.Albedo * ramp * (atten * 2));
-	c.a = 0;
+	//c.rgb =  _LightColor0.rgb * (s.Albedo * (atten * 2));
+	c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten * 2);
+	c.a = s.Alpha;
 	#if USERAMP
 	c.rgb = _LightColor0.rgb * (s.Albedo * d * (atten * 2));
 	#endif
 	return c;
+
+
 }
 
 

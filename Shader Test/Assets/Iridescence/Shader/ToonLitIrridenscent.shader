@@ -1,7 +1,7 @@
 Shader "Toon/Iridescent" {
 	Properties{
 		_Color("Main Color", Color) = (0.5,0.5,0.5,1)
-		
+		_EmColor("Emission Color", Color) = (0.5,0.5,0.5,1)
 		_MainTex("Base (RGB)", 2D) = "white" {}
 
 	_Noise("Noise (RGB)", 2D) = "white" {} // noise texture
@@ -49,6 +49,7 @@ Shader "Toon/Iridescent" {
 	sampler2D _Noise; // noise
 	sampler2D _IrTex; // color ramp
 	float4 _Color;
+	float4 _EmColor;
 	float4 _IrColor; // extra tinting
 	float _Offset; // color ramp offset
 	float _Brightness; // Iridescence opacity
@@ -76,6 +77,7 @@ Shader "Toon/Iridescent" {
 		o.Albedo = (c.rgb) + ((i * n) * _Brightness); // multiplied by original texture, with an opacity float
 		
 		o.Alpha = c.a;
+		o.Emission = _EmColor;
 	}
 	ENDCG
 
