@@ -32,7 +32,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Tea
-    second: {fileID: 2100002, guid: 59c41f8abfe7ef24892a25bf17c5ea6b, type: 3}
+    second: {fileID: 2100000, guid: 6af68c6fe44582a458994c5e6a3a59fe, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
