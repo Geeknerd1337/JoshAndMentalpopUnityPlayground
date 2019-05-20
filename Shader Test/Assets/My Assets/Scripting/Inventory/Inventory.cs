@@ -57,4 +57,25 @@ public class Inventory : MonoBehaviour {
         }
         
     }
+
+
+    public int ReturnValues()
+    {
+       
+        int myValue = 0;
+        for(int i = 0; i < items.Count; i++)
+        {
+            myValue += items[i].value;
+            
+
+        }
+
+        int b = items.Count;
+
+        for(var i = 0; i < b; i++)
+        {
+            items.Remove(items[0]);
+        }
+        return myValue;
+    }
 }

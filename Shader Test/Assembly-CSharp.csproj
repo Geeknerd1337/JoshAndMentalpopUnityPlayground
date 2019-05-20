@@ -99,12 +99,17 @@
     <Compile Include="Assets\Junk (but possibly in use)\TriPlanar\Scripts\Merge.cs" />
     <Compile Include="Assets\My Assets\Scripting\Computer\ComputerTrigger.cs" />
     <Compile Include="Assets\My Assets\Scripting\Computer\FirefliesRGB.cs" />
+    <Compile Include="Assets\My Assets\Scripting\Interactivity\Interact.cs" />
+    <Compile Include="Assets\My Assets\Scripting\Interactivity\Interactable.cs" />
+    <Compile Include="Assets\My Assets\Scripting\Interactivity\ItemPickup.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\Inventory.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\InventorySlot.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\InventoryUI.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\Item.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\RotateItem.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\ToolTip.cs" />
+    <Compile Include="Assets\My Assets\Scripting\LevelControl\GetValue.cs" />
+    <Compile Include="Assets\My Assets\Scripting\LevelControl\ThieveControl.cs" />
     <Compile Include="Assets\My Assets\Scripting\Messages System\Message.cs" />
     <Compile Include="Assets\My Assets\Scripting\Messages System\MessageMaster.cs" />
     <Compile Include="Assets\My Assets\Scripting\Messages System\MessageTrigger.cs" />

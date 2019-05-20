@@ -11,6 +11,8 @@ public class Item : ScriptableObject {
     public float itemYOffset;
     public float itemXOffset;
     public float itemScale;
+    public int value;
+    public GameObject physicalItem;
 
     [TextArea(3,10)]
     public string description = "Item Description";

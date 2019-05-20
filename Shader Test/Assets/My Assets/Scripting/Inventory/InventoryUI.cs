@@ -34,6 +34,7 @@ public class InventoryUI : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.B))
         {
+            UpdateUI();
             inventoryUI.SetActive(!inventoryUI.activeSelf);
             player.enabled = !player.enabled;
             if (Cursor.lockState != CursorLockMode.Locked)

@@ -33,6 +33,10 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             model.transform.localPosition = new Vector3(0 + item.itemXOffset, 0 + item.itemYOffset, 0);
             model.layer = 5;
             model.transform.localScale = new Vector3(item.itemScale, item.itemScale, item.itemScale);
+            if (model.GetComponent<Rigidbody>() != null)
+            {
+                model.GetComponent<Rigidbody>().useGravity = false;
+            }
 
 
         }
