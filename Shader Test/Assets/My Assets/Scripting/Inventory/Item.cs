@@ -13,6 +13,7 @@ public class Item : ScriptableObject {
     public float itemScale;
     public int value;
     public GameObject physicalItem;
+    public int weight;
 
     [TextArea(3,10)]
     public string description = "Item Description";

@@ -88,6 +88,9 @@ namespace Invector.CharacterController
         protected float groundDistance;
         public RaycastHit groundHit;
 
+
+        public float weightCoef;
+
         #endregion
 
         #region Actions
@@ -233,7 +236,8 @@ namespace Invector.CharacterController
         {
             // set speed to both vertical and horizontal inputs
             speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);            
-            speed = Mathf.Clamp(speed, 0, 1f);
+            speed = Mathf.Clamp(speed, 0.1f, 1f);
+            speed *= weightCoef;
             // add 0.5f on sprint to change the animation on animator
             if (isSprinting) speed += 0.5f;
                         

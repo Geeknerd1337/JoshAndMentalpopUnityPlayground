@@ -78,4 +78,15 @@ public class Inventory : MonoBehaviour {
         }
         return myValue;
     }
+
+
+    public float ReturnWeights()
+    {
+        float weight = 0;
+        for(int i = 0; i < items.Count; i++)
+        {
+            weight += items[i].weight;
+        }
+        return weight;
+    }
 }
