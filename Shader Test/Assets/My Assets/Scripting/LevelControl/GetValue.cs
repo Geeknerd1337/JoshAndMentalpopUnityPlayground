@@ -24,7 +24,7 @@ public class GetValue : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("Steal"))
             {
                 Debug.Log("Hey");
                 t.totalValue += i.ReturnValues();

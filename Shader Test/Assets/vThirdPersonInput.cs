@@ -12,9 +12,9 @@ namespace Invector.CharacterController
         [Header("Default Inputs")]
         public string horizontalInput = "Horizontal";
         public string verticallInput = "Vertical";
-        public KeyCode jumpInput = KeyCode.Space;
+        public string jumpInput = "Jump";
         public KeyCode strafeInput = KeyCode.Tab;
-        public KeyCode sprintInput = KeyCode.LeftShift;
+        public string  sprintInput = "Sprint";
 
         [Header("Camera Settings")]
         public string rotateCameraXInput ="Mouse X";
@@ -103,15 +103,15 @@ namespace Invector.CharacterController
 
         protected virtual void SprintInput()
         {
-            if (Input.GetKeyDown(sprintInput))
+            if (Input.GetButtonDown(sprintInput))
                 cc.Sprint(true);
-            else if(Input.GetKeyUp(sprintInput))
+            else if(Input.GetButtonUp(sprintInput))
                 cc.Sprint(false);
         }
 
         protected virtual void JumpInput()
         {
-            if (Input.GetKeyDown(jumpInput))
+            if (Input.GetButtonDown(jumpInput))
                 cc.Jump();
         }
 

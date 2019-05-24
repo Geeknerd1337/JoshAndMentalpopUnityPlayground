@@ -7,7 +7,7 @@ public class Interact : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.E) || Input.GetMouseButtonDown(0)) {
+		if (Input.GetButtonDown("Steal") || Input.GetMouseButtonDown(0)) {
 			InteractWith ();
 		}
 		//Debug.DrawRay (fpsCam.transform.position, fpsCam.transform.forward);
