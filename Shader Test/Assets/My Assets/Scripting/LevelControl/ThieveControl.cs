@@ -63,7 +63,7 @@ public class ThieveControl : MonoBehaviour
                 endTrigger = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetButtonDown("Kwit"))
             {
                 SceneManager.LoadScene("HouseLevel");
             }
