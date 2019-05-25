@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using Invector.CharacterController;
+using UnityEngine.SceneManagement;
+
+
 
 public class ThieveControl : MonoBehaviour
 {
@@ -20,16 +23,51 @@ public class ThieveControl : MonoBehaviour
     public float weightTotal = 100;
     public float currWeight;
     public vThirdPersonMotor playerMotor;
+    public vThirdPersonController player;
+    private bool endTrigger;
+
+    public Text endText;
+
+    public Text amtText;
+
+    public int valueThreshold;
     // Start is called before the first frame update
     void Start()
     {
         lastMinute = 0;
+        endTrigger = false;
+        endText.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        time -= Time.deltaTime;
+        if (time > 0)
+        {
+            time -= Time.deltaTime;
+        }
+        else
+        {
+            if (endTrigger == false)
+            {
+                if (valueActual > valueThreshold)
+                {
+                    player.enabled = false;
+                    endText.text = "YOU WIN";
+                }
+                else
+                {
+                    player.enabled = false;
+                    endText.text = "YOU LOSE";
+                }
+                endTrigger = true;
+            }
+
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                SceneManager.LoadScene("HouseLevel");
+            }
+        }
 
         t.text = FormatSeconds(time);
 
@@ -38,6 +76,7 @@ public class ThieveControl : MonoBehaviour
 
         currWeight = Inventory.instance.ReturnWeights();
         playerMotor.weightCoef = Mathf.Clamp(1.0f - (currWeight / weightTotal), 0, 1.0f);
+        amtText.text = Inventory.instance.items.Count.ToString() + "/" + Inventory.instance.space;
 
     }
 
