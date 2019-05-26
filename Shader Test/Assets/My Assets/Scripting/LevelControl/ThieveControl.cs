@@ -34,7 +34,7 @@ public class ThieveControl : MonoBehaviour
 
     public GameObject[] inRadius;
     public float interActionRadius;
-    public Outline[] outlines;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +43,7 @@ public class ThieveControl : MonoBehaviour
         endTrigger = false;
         endText.text = "";
 
-        outlines = FindObjectsOfType<Outline>();
+
 
     }
 
@@ -86,7 +86,7 @@ public class ThieveControl : MonoBehaviour
         playerMotor.weightCoef = Mathf.Clamp(1.0f - (currWeight / weightTotal), 0, 1.0f);
         amtText.text = Inventory.instance.items.Count.ToString() + "/" + Inventory.instance.space;
 
-        SetArray();
+ 
 
     }
 
@@ -108,30 +108,7 @@ public class ThieveControl : MonoBehaviour
     }
 
 
-    void SetArray()
-    {
-        Collider[] hitColliders = Physics.OverlapSphere(player.gameObject.transform.position, interActionRadius);
-        
-
-        int i = 0;
-        while (i < hitColliders.Length)
-        {
-            if (hitColliders[i].gameObject.GetComponent<Outline>() != null)
-            {
-                hitColliders[i].gameObject.GetComponent<Outline>().enabled = true;
-                Debug.Log("Worked");
-            }
-            i++;
-        }
 
 
-    }
 
-    void ResetAllOutlines()
-    {
-        foreach(Outline o in outlines)
-        {
-            o.enabled = false;
-        }
-    }
 }
