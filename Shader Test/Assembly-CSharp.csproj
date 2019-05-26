@@ -108,11 +108,20 @@
     <Compile Include="Assets\My Assets\Scripting\Inventory\Item.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\RotateItem.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\ToolTip.cs" />
+    <Compile Include="Assets\My Assets\Scripting\Kaitlyn's not a programmer but she tries\DistanceComparer.cs" />
+    <Compile Include="Assets\My Assets\Scripting\Kaitlyn's not a programmer but she tries\Sense.cs" />
     <Compile Include="Assets\My Assets\Scripting\LevelControl\GetValue.cs" />
     <Compile Include="Assets\My Assets\Scripting\LevelControl\ThieveControl.cs" />
     <Compile Include="Assets\My Assets\Scripting\Messages System\Message.cs" />
     <Compile Include="Assets\My Assets\Scripting\Messages System\MessageMaster.cs" />
     <Compile Include="Assets\My Assets\Scripting\Messages System\MessageTrigger.cs" />
+    <Compile Include="Assets\OutlineEffect\Demo\MaterialSwitcher.cs" />
+    <Compile Include="Assets\OutlineEffect\Demo\OutlineAnimation.cs" />
+    <Compile Include="Assets\OutlineEffect\Demo\Rotate.cs" />
+    <Compile Include="Assets\OutlineEffect\Demo\Toggle.cs" />
+    <Compile Include="Assets\OutlineEffect\LinkedSet.cs" />
+    <Compile Include="Assets\OutlineEffect\Outline.cs" />
+    <Compile Include="Assets\OutlineEffect\OutlineEffect.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -200,6 +209,7 @@
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LightColorNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Templates\Legacy\MultiPassUnlit.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Community\Volumetric Pixelization\Credits.txt" />
+    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Outline\UltimateOutlineSilhouette.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Vector4Node.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_IndirectSpecularLight.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleDivideOpNode.shader" />
@@ -247,6 +257,7 @@
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_PiNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FloorOpNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareLessNode.shader" />
+    <None Include="Assets\OutlineEffect\Resources\OutlineShader.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
     <None Include="Assets\Iridescence\Shader\ToonLitIrridenscent.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Community\Dissolve Burn\DissolveBurn.shader" />
@@ -265,6 +276,7 @@
     <None Include="Assets\AmplifyShaderEditor\Examples\Community\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\Projectors\ProjectorShadow.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_VertexTangentNode.shader" />
+    <None Include="Assets\OutlineEffect\Resources\OutlineBufferShader.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RoundOpNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldSpaceLightPosNode.shader" />
@@ -351,6 +363,7 @@
     <None Include="Assets\Hologram\Shaders\FXHologramExtraXRay.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\UI\SimpleUI\SimpleUI.shader" />
+    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Outline\OutlineBeans.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\XRay\ProceduralWall.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleNoise\SimpleNoise.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LinearToGammaNode.shader" />
@@ -391,6 +404,7 @@
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\UISpriteFX\UISpriteFX.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\PostProcess\FilmGrain\Credits.txt" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RelayNode.shader" />
+    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Outline\UltimateOutline.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\TerrainSnowCoverage\TerrainSnowCoverageFirstPass.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\Dithering\DitheringFade.shader" />
     <None Include="Assets\AdultLink\TexturePanner\Icons\License.txt" />
@@ -402,6 +416,7 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Community\HologramSimple\Credits.txt" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LogOpNode.shader" />
+    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Outline\UltimateOutlineShadows.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_AppendNode.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\CustomRTRain\Readme.txt" />
