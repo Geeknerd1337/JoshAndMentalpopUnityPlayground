@@ -31,12 +31,20 @@ public class ThieveControl : MonoBehaviour
     public Text amtText;
 
     public int valueThreshold;
+
+    public GameObject[] inRadius;
+    public float interActionRadius;
+    public Outline[] outlines;
+
     // Start is called before the first frame update
     void Start()
     {
         lastMinute = 0;
         endTrigger = false;
         endText.text = "";
+
+        outlines = FindObjectsOfType<Outline>();
+
     }
 
     // Update is called once per frame
@@ -78,6 +86,8 @@ public class ThieveControl : MonoBehaviour
         playerMotor.weightCoef = Mathf.Clamp(1.0f - (currWeight / weightTotal), 0, 1.0f);
         amtText.text = Inventory.instance.items.Count.ToString() + "/" + Inventory.instance.space;
 
+        SetArray();
+
     }
 
     string FormatSeconds(float elapsed)
@@ -95,5 +105,33 @@ public class ThieveControl : MonoBehaviour
         }
         int hundredths = d % 100;
         return String.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+
+    void SetArray()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(player.gameObject.transform.position, interActionRadius);
+        
+
+        int i = 0;
+        while (i < hitColliders.Length)
+        {
+            if (hitColliders[i].gameObject.GetComponent<Outline>() != null)
+            {
+                hitColliders[i].gameObject.GetComponent<Outline>().enabled = true;
+                Debug.Log("Worked");
+            }
+            i++;
+        }
+
+
+    }
+
+    void ResetAllOutlines()
+    {
+        foreach(Outline o in outlines)
+        {
+            o.enabled = false;
+        }
     }
 }
