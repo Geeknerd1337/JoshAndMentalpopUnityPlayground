@@ -167,6 +167,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\sumPause\Scripts\SumPause.cs" />
+    <Compile Include="Assets\TriPlanar\Scripts\Merge.cs" />
     <Compile Include="Assets\VirtualSnapshot\Scripts\DemoScripts\DemoCameraTargetScript.cs" />
     <Compile Include="Assets\VirtualSnapshot\Scripts\DemoScripts\DemoLevelScript.cs" />
     <Compile Include="Assets\VirtualSnapshot\Scripts\DemoScripts\DemoLevelWarpScript.cs" />
@@ -298,6 +299,7 @@
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DegreesOpNode.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCPixelateUV.shader" />
+    <None Include="Assets\TriPlanar\Shader\ToonLitTriPlanar.shader" />
     <None Include="Assets\AdultLink\RadialProgressBar\SimpleRadialProgressBar.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Exp2OpNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DotProductOpNode.shader" />
@@ -307,6 +309,7 @@
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TemplateShaderProperty.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\TriPlanar\Shader\ToonLitMerge.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ConditionalIfNode.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
     <None Include="Assets\My Assets\Materials\Shaders\BurnEffect.shader" />
