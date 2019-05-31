@@ -18,7 +18,7 @@ public class RivenGogglesAnimationControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        r.materials[2].SetFloat("_Offset", val);
+        r.materials[3].SetFloat("_Offset", val);
         val += speed * Time.deltaTime;
         if(val > 1.0f)
         {

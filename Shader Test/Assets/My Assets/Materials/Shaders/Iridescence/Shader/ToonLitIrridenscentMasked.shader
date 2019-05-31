@@ -13,6 +13,8 @@ Shader "Toon/Iridescent Masked" {
 	_Brightness ("Iridescence Opacity", Range (0, 1)) = 1 // opacity of iridescence
 	_WorldScale ("Noise Worldscale", Range (.002, 5)) = 1 // noise scale
 	[Toggle(LM)] _LM("Use Lightmap UVS?", Float) = 0 // use lightmap uvs instead of normal ones
+		   _EmissionLM("Emission (Lightmapper)", Float) = 0
+   [Toggle] _DynamicEmissionLM("Dynamic Emission (Lightmapper)", Int) = 0 // emission for the unemissioned
 
 
 	}
@@ -53,6 +55,8 @@ Shader "Toon/Iridescent Masked" {
 	float _Offset; // color ramp offset
 	float _Brightness; // Iridescence opacity
 	float _WorldScale; // noise scale
+	float _EmissionLM; // Emission
+
 
 	struct Input {
 		float2 uv_MainTex : TEXCOORD0;
@@ -61,6 +65,7 @@ Shader "Toon/Iridescent Masked" {
 	};
 
 	void surf(Input IN, inout SurfaceOutput o) {
+
 
 		half f = 1 -dot(o.Normal, IN.viewDir) + _Offset; // fresnel
 		half4 m = tex2D(_Mask, IN.uv_MainTex); // mask
@@ -77,6 +82,8 @@ Shader "Toon/Iridescent Masked" {
 		o.Albedo = (c.rgb) + ((i * n) * _Brightness * m); // multiplied by original texture, with an opacity float
 		
 		o.Alpha = c.a;
+
+
 	}
 	ENDCG
 
