@@ -109,6 +109,7 @@
     <Compile Include="Assets\My Assets\Scripting\SceneLoader.cs" />
     <Compile Include="Assets\My Assets\Scripting\SimpleGPUInstancing\SimpleGPUInstancingExample.cs" />
     <Compile Include="Assets\My Assets\Scripting\TurnAroundScript.cs" />
+    <Compile Include="Assets\My Assets\Scripting\UISummoner.cs" />
     <Compile Include="Assets\My Assets\Scripting\VariableStorageBehaviour.cs" />
     <Compile Include="Assets\My Assets\Scripting\vThirdPersonAnimator.cs" />
     <Compile Include="Assets\My Assets\Scripting\vThirdPersonController.cs" />
