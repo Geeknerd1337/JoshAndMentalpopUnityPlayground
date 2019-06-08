@@ -107,6 +107,8 @@
     <Compile Include="Assets\My Assets\Scripting\Messages System\Message.cs" />
     <Compile Include="Assets\My Assets\Scripting\Messages System\MessageMaster.cs" />
     <Compile Include="Assets\My Assets\Scripting\Messages System\MessageTrigger.cs" />
+    <Compile Include="Assets\My Assets\Scripting\Messages System\RivenMessage.cs" />
+    <Compile Include="Assets\My Assets\Scripting\Messages System\RivenMessageTrigger.cs" />
     <Compile Include="Assets\My Assets\Scripting\RivenDialog.cs" />
     <Compile Include="Assets\My Assets\Scripting\SceneLoader.cs" />
     <Compile Include="Assets\My Assets\Scripting\SimpleGPUInstancing\SimpleGPUInstancingExample.cs" />
