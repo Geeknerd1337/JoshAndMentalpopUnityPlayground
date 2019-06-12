@@ -1084,6 +1084,10 @@
       <Project>{7FC9227B-B189-E25C-7EDC-7D9DA705C597}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="Ink-Runtime.csproj">
+      <Project>{E4FEE041-3ED3-FAC7-8EF5-7676BBB4EB6E}</Project>
+      <Name>Ink-Runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
