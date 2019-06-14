@@ -544,6 +544,12 @@
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>G:/Unity/JoshAndMentalpopUnityPlayground/Shader Test/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>G:/Unity/JoshAndMentalpopUnityPlayground/Shader Test/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>G:/Unity/JoshAndMentalpopUnityPlayground/Shader Test/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>G:/New Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>

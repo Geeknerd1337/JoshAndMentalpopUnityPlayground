@@ -61,6 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\Ink\Example\Scripts\BasicInkExample.cs" />
+    <Compile Include="Assets\Plugins\Modal\BringToFront.cs" />
+    <Compile Include="Assets\Plugins\Modal\DisplayManager.cs" />
+    <Compile Include="Assets\Plugins\Modal\GameManager.cs" />
+    <Compile Include="Assets\Plugins\Modal\InkManager.cs" />
+    <Compile Include="Assets\Plugins\Modal\ModalPanel.cs" />
+    <Compile Include="Assets\Plugins\Modal\ProgramNotes.cs" />
+    <Compile Include="Assets\Plugins\Modal\TestModalWindow.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
@@ -192,6 +199,12 @@
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>G:/Unity/JoshAndMentalpopUnityPlayground/Shader Test/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>G:/Unity/JoshAndMentalpopUnityPlayground/Shader Test/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>G:/Unity/JoshAndMentalpopUnityPlayground/Shader Test/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>G:/New Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

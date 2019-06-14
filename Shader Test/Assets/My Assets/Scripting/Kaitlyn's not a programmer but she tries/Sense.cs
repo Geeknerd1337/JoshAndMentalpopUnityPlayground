@@ -21,8 +21,10 @@ public class Sense : MonoBehaviour
         }
         ResetAllOutlines();
         GetNearestObject();
-    }
 
+      
+    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, checkRadius);

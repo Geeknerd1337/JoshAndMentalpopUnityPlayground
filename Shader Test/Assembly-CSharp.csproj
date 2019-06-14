@@ -102,6 +102,7 @@
     <Compile Include="Assets\My Assets\Scripting\Inventory\ToolTip.cs" />
     <Compile Include="Assets\My Assets\Scripting\Kaitlyn's not a programmer but she tries\DistanceComparer.cs" />
     <Compile Include="Assets\My Assets\Scripting\Kaitlyn's not a programmer but she tries\Sense.cs" />
+    <Compile Include="Assets\My Assets\Scripting\Kaitlyn's not a programmer but she tries\Targetting.cs" />
     <Compile Include="Assets\My Assets\Scripting\LevelControl\GetValue.cs" />
     <Compile Include="Assets\My Assets\Scripting\LevelControl\ThieveControl.cs" />
     <Compile Include="Assets\My Assets\Scripting\Messages System\Message.cs" />
@@ -522,6 +523,12 @@
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>G:/Unity/JoshAndMentalpopUnityPlayground/Shader Test/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>G:/Unity/JoshAndMentalpopUnityPlayground/Shader Test/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>G:/Unity/JoshAndMentalpopUnityPlayground/Shader Test/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>G:/New Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
