@@ -6,7 +6,10 @@ public class Sense : MonoBehaviour
     public float checkRadius;
     public LayerMask checkLayers;
     public Outline[] outlines;
-
+    public float radius;
+    public float depth;
+    public float angle;
+    private Physics physics;
 
     public void Start()
     {
@@ -33,21 +36,24 @@ public class Sense : MonoBehaviour
 
     void GetNearestObject()
     {
+        RaycastHit[] coneHits = physics.ConeCastAll(transform.position, radius, transform.forward, depth, angle, checkLayers);
+        
         Collider[] colliders = Physics.OverlapSphere(transform.position, checkRadius, checkLayers);
-        Array.Sort(colliders, new DistanceComparer(transform));
+        //Array.Sort(coneHits, new DistanceComparer(transform));
+        System.Array.Sort(coneHits, (x, y) => x.distance.CompareTo(y.distance));
 
         if (colliders.Length > 0)
         {
-            if (colliders[0].gameObject.GetComponent<Outline>() != null && colliders[0] != null)
+            if (coneHits[0].transform.gameObject.GetComponent<Outline>() != null && colliders[0] != null)
             {
-                colliders[0].gameObject.GetComponent<Outline>().enabled = true;
+                coneHits[0].transform.gameObject.GetComponent<Outline>().enabled = true;
             }
 
 
             if (Input.GetButtonDown("Steal"))
             {
 
-                colliders[0].gameObject.GetComponent<Interactable>().Interact();
+                coneHits[0].transform.gameObject.GetComponent<Interactable>().Interact();
                 
             }
         }
