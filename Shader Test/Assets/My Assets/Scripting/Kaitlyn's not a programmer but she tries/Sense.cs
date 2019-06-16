@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections.Generic;
 using cakeslice;
 public class Sense : MonoBehaviour
 {
@@ -36,27 +37,53 @@ public class Sense : MonoBehaviour
 
     void GetNearestObject()
     {
-        RaycastHit[] coneHits = physics.ConeCastAll(transform.position, radius, transform.forward, depth, angle, checkLayers);
+
         
         Collider[] colliders = Physics.OverlapSphere(transform.position, checkRadius, checkLayers);
-        //Array.Sort(coneHits, new DistanceComparer(transform));
-        System.Array.Sort(coneHits, (x, y) => x.distance.CompareTo(y.distance));
+        Array.Sort(colliders, new DistanceComparer(transform));
+        List<Collider> colliderList = new List<Collider>();
 
-        if (colliders.Length > 0)
+        for(int _i = 0; _i < colliders.Length; _i++)
         {
-            if (coneHits[0].transform.gameObject.GetComponent<Outline>() != null && colliders[0] != null)
+            if (IsTransformInCone(colliders[_i].transform, transform.position, transform.forward, 45))
             {
-                coneHits[0].transform.gameObject.GetComponent<Outline>().enabled = true;
+                colliderList.Add(colliders[_i]);
+            }
+        }
+
+
+        if (colliderList.Count > 0)
+        {
+            if (colliderList[0].gameObject.GetComponent<Outline>() != null && colliderList[0] != null)
+            {
+                colliderList[0].gameObject.GetComponent<Outline>().enabled = true;
             }
 
 
             if (Input.GetButtonDown("Steal"))
             {
 
-                coneHits[0].transform.gameObject.GetComponent<Interactable>().Interact();
-                
+                colliderList[0].gameObject.GetComponent<Interactable>().Interact();
+
             }
         }
+
+        /*
+        if (colliders.Length > 0)
+        {
+            if (colliders[0].gameObject.GetComponent<Outline>() != null && colliders[0] != null)
+            {
+                colliders[0].gameObject.GetComponent<Outline>().enabled = true;
+            }
+
+
+            if (Input.GetButtonDown("Steal"))
+            {
+
+                colliders[0].gameObject.GetComponent<Interactable>().Interact();
+                
+            }
+        }*/
     }
 
     void ResetAllOutlines()
@@ -68,6 +95,13 @@ public class Sense : MonoBehaviour
                 o.enabled = false;
             }
         }
+    }
+
+    bool IsTransformInCone(Transform t, Vector3 coneTipPos, Vector3 coneDirection, float coneHalfAngle)
+    {
+        Vector3 directionTowardT = t.position - coneTipPos;
+        float angleFromConeCenter = Vector3.Angle(directionTowardT, coneDirection);
+        return angleFromConeCenter <= coneHalfAngle;
     }
 
 }
