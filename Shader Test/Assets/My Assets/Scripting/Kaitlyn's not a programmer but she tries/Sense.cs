@@ -38,6 +38,12 @@ public class Sense : MonoBehaviour
                 targets.Add(colliderList[i].transform);
             }
         }
+
+
+        if (index >= targets.Count)
+        {
+            index = 0;
+        }
     }
 
 
@@ -80,14 +86,17 @@ public class Sense : MonoBehaviour
 
         private void Update()
         {
-        if (Input.GetButtonDown("Sense"))
-        {
 
-        }
         ResetAllOutlines();
         CycleTarget();
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+
+        if(index >= targets.Count)
+        {
+            index = 0;
+        }
+
+        if (Input.GetButtonDown("UIHorizontal"))
         {
             IncreaseIndex();
         }
