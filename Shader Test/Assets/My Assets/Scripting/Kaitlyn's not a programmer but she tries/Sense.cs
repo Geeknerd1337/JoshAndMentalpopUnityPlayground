@@ -12,19 +12,85 @@ public class Sense : MonoBehaviour
     public float angle;
     private Physics physics;
 
+    public List<Transform> targets;
+    public Transform selectedTarget;
+    private int index;
+
+
+
     public void Start()
     {
         outlines = FindObjectsOfType<Outline>();
+        targets = new List<Transform>();
+        selectedTarget = null;
+        index = 0;
     }
 
-    private void Update()
+    public void AddAllTargets()
     {
+        List<Collider> colliderList = GetNearestObject();
+        targets.Clear();
+
+        if(colliderList.Count > 0)
+        {
+            for(int i = 0; i < colliderList.Count; i++)
+            {
+                targets.Add(colliderList[i].transform);
+            }
+        }
+    }
+
+
+    public void CycleTarget()
+    {
+        AddAllTargets();
+        if(targets.Count > 0)
+        {
+            targets[index].gameObject.GetComponent<Outline>().enabled = true;
+
+
+
+            if (Input.GetButtonDown("Steal"))
+            {
+
+                targets[index].gameObject.GetComponent<Interactable>().Interact();
+
+            }
+        }
+    }
+
+
+    void IncreaseIndex()
+    {
+        index++;
+        if(index >= targets.Count)
+        {
+            index = 0;
+        }
+    }
+
+    void DecreaseIndex()
+    {
+        index--;
+        if(index < 0)
+        {
+            index = targets.Count;
+        }
+    }
+
+        private void Update()
+        {
         if (Input.GetButtonDown("Sense"))
         {
 
         }
         ResetAllOutlines();
-        GetNearestObject();
+        CycleTarget();
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            IncreaseIndex();
+        }
 
       
     }
@@ -35,7 +101,7 @@ public class Sense : MonoBehaviour
     }
 
 
-    void GetNearestObject()
+    List<Collider> GetNearestObject()
     {
 
         
@@ -52,7 +118,9 @@ public class Sense : MonoBehaviour
         }
 
 
-        if (colliderList.Count > 0)
+        return colliderList;
+
+        /*if (colliderList.Count > 0)
         {
             if (colliderList[0].gameObject.GetComponent<Outline>() != null && colliderList[0] != null)
             {
@@ -66,7 +134,7 @@ public class Sense : MonoBehaviour
                 colliderList[0].gameObject.GetComponent<Interactable>().Interact();
 
             }
-        }
+        }*/
 
         /*
         if (colliders.Length > 0)

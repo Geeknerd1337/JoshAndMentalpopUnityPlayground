@@ -9,6 +9,10 @@ public class Targetting : MonoBehaviour
     public Transform selectedTarget;
 
     private Transform myTransform;
+    public float radius;
+    public float depth;
+    public float angle;
+    private Physics physics;
 
     // Start is called before the first frame update
     void Start()
