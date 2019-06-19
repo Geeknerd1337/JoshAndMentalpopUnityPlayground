@@ -60,11 +60,11 @@ public class Sense : MonoBehaviour
             {
 
                 targets[index].gameObject.GetComponent<Interactable>().Interact();
-
+                targets.RemoveAt(index);
             }
         }
     }
-
+     // Short answer, yes. When you remove a moth from the hell fire...
 
     void IncreaseIndex()
     {
