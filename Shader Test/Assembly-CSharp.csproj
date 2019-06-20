@@ -80,6 +80,8 @@
     <Compile Include="Assets\AdultLink\TexturePanner\Examples\Scripts\HueShift.cs" />
     <Compile Include="Assets\AdultLink\TexturePanner\Examples\Scripts\SetColor.cs" />
     <Compile Include="Assets\Button.cs" />
+    <Compile Include="Assets\FORGE3D\CameraTool\F3DCameraTool.cs" />
+    <Compile Include="Assets\FORGE3D\CameraTool\F3DCameraToolEditor.cs" />
     <Compile Include="Assets\Junk (but possibly in use)\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\Camera\vThirdPersonCamera.cs" />
     <Compile Include="Assets\Junk (but possibly in use)\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\Generic\vComment.cs" />
     <Compile Include="Assets\Junk (but possibly in use)\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\Generic\vDestroyGameObject.cs" />

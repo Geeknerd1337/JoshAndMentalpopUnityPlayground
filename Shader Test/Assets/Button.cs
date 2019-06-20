@@ -5,7 +5,7 @@ using UnityEngine;
 public class Button : Interactable
 {
 
-    private Animator a;
+    public Animator a;
 
     public void Start()
     {
@@ -14,7 +14,7 @@ public class Button : Interactable
     public override void Interact()
     {
         base.Interact();
-        a.SetBool("IsPressed", !a.GetBool("IsPressed"));
+        a.SetBool("IsPushed", !a.GetBool("IsPushed"));
 
     }
 }
