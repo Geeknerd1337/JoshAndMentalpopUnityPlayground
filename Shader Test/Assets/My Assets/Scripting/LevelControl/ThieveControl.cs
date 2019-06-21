@@ -35,6 +35,8 @@ public class ThieveControl : MonoBehaviour
     public GameObject[] inRadius;
     public float interActionRadius;
 
+    public List<Item> neededItems;
+
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +60,7 @@ public class ThieveControl : MonoBehaviour
         {
             if (endTrigger == false)
             {
-                if (valueActual > valueThreshold)
+                if (checkItems())
                 {
                     player.enabled = false;
                     endText.text = "YOU WIN";
@@ -105,6 +107,20 @@ public class ThieveControl : MonoBehaviour
         }
         int hundredths = d % 100;
         return String.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+
+    bool checkItems()
+    {
+        Inventory inv = Inventory.instance;
+
+        bool bb = false;
+        for(int b = 0; b < neededItems.Count; b++)
+        {
+            bb = inv.items.Contains(neededItems[b]);
+
+        }
+        return bb;
     }
 
 
