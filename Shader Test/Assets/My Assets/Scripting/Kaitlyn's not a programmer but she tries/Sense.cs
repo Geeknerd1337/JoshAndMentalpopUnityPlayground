@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using cakeslice;
+using System.Collections;
+
 public class Sense : MonoBehaviour
 {
     public float checkRadius;
@@ -15,6 +17,9 @@ public class Sense : MonoBehaviour
     public List<Transform> targets;
     public Transform selectedTarget;
     private int index;
+    private Inventory inventory;
+
+
 
 
 
@@ -24,7 +29,29 @@ public class Sense : MonoBehaviour
         targets = new List<Transform>();
         selectedTarget = null;
         index = 0;
+        inventory = Inventory.instance;
     }
+
+
+    IEnumerator DropInventory(int count)
+    {
+
+        for(int _i = 0; _i < count; _i++)
+        {
+            Debug.Log(inventory.items[0].name);
+            if (inventory.items[0].physicalItem != null) {
+                GameObject g = Instantiate(inventory.items[0].physicalItem, gameObject.transform);
+                g.transform.parent = null;
+                g.transform.position = gameObject.transform.position;
+            }
+            inventory.Remove(inventory.items[0]);
+
+            yield return new WaitForSeconds(0.2f);
+
+        }
+        
+    }
+
 
     public void AddAllTargets()
     {
@@ -99,6 +126,11 @@ public class Sense : MonoBehaviour
         if (Input.GetButtonDown("UIHorizontal"))
         {
             IncreaseIndex();
+        }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            StartCoroutine(DropInventory(inventory.items.Count));
         }
 
       
@@ -180,5 +212,8 @@ public class Sense : MonoBehaviour
         float angleFromConeCenter = Vector3.Angle(directionTowardT, coneDirection);
         return angleFromConeCenter <= coneHalfAngle;
     }
+
+
+
 
 }
