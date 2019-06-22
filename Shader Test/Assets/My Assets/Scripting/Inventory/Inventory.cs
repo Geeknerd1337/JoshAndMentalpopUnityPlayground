@@ -74,6 +74,7 @@ public class Inventory : MonoBehaviour {
 
         for(var i = 0; i < b; i++)
         {
+            FindObjectOfType<ThieveControl>().collectedItems.Add(items[0]);
             items.Remove(items[0]);
         }
         return myValue;

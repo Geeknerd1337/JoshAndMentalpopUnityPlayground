@@ -36,6 +36,7 @@ public class ThieveControl : MonoBehaviour
     public float interActionRadius;
 
     public List<Item> neededItems;
+    public List<Item> collectedItems;
 
 
     // Start is called before the first frame update
@@ -63,12 +64,12 @@ public class ThieveControl : MonoBehaviour
                 if (checkItems())
                 {
                     player.enabled = false;
-                    endText.text = "I'mma crown you King of Thieves!";
+                    endText.text = "I'mma crown you \nKing of Thieves!";
                 }
                 else
                 {
                     player.enabled = false;
-                    endText.text = "Wow, you're a real thief!";
+                    endText.text = "Failure, you are a \nFAILURE.";
                 }
                 endTrigger = true;
             }
@@ -117,7 +118,7 @@ public class ThieveControl : MonoBehaviour
         bool bb = false;
         for(int b = 0; b < neededItems.Count; b++)
         {
-            bb = inv.items.Contains(neededItems[b]);
+            bb = collectedItems.Contains(neededItems[b]);
 
         }
         return bb;
