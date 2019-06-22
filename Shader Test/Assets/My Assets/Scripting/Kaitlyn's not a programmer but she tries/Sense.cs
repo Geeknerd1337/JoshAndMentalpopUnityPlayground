@@ -128,7 +128,7 @@ public class Sense : MonoBehaviour
             IncreaseIndex();
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
+		if (Input.GetButtonDown("Yeet"))
         {
             StartCoroutine(DropInventory(inventory.items.Count));
         }
