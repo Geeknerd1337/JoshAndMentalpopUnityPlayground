@@ -13,8 +13,9 @@ public class Button : Interactable
     }
     public override void Interact()
     {
-        base.Interact();
-        a.SetBool("IsPushed", !a.GetBool("IsPushed"));
+        //base.Interact();
+        a.SetBool("isPressed", !a.GetBool("isPressed"));
+        Debug.Log("Fuck");
 
     }
 }
