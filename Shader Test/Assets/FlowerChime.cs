@@ -4,7 +4,7 @@ using System.Collections;
 public class FlowerChime : MonoBehaviour
 {
 
-    public AudioClip flowerBumble;
+ 
     public bool alreadyPlayed = false;
 
 
@@ -30,8 +30,22 @@ public class FlowerChime : MonoBehaviour
             source.pitch = Random.Range(lowPitchRange, highPitchRange);
             GetComponent<AudioSource>().Play();
             alreadyPlayed = true;
+            StopCoroutine("SetBoolToFalse");
+            StartCoroutine("SetBoolToFalse");
         }
       
+    }
+    
+
+    private IEnumerator SetBoolToFalse()
+    {
+
+        yield return new WaitForSeconds(3f);
+        if (alreadyPlayed == true)
+        {
+            alreadyPlayed = false;
+        }
+        yield return null;
     }
 
 }
