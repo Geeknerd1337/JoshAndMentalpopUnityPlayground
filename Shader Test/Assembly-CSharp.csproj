@@ -291,6 +291,7 @@
     <None Include="Assets\AdultLink\RadialProgressBar\RadialProgressBar.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleMaxOp.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RotatorNode.shader" />
+    <None Include="Assets\My Assets\Materials\Shaders\BubbleShader.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DecodeFloatRGBAHlpNode.shader" />
     <None Include="Assets\My Assets\Materials\Shaders\UVLightReveal\UV light.shader" />
     <None Include="Assets\My Assets\Materials\Shaders\FXHologramExtra.shader" />
