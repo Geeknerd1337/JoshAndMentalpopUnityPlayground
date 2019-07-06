@@ -22,20 +22,32 @@ public class FlowerChime : MonoBehaviour
     }
 
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("it trigger");
-        if (!alreadyPlayed)
+
+        if (other.tag == "Player")
         {
-            source.pitch = Random.Range(lowPitchRange, highPitchRange);
-            GetComponent<AudioSource>().Play();
-            alreadyPlayed = true;
-            StopCoroutine("SetBoolToFalse");
-            StartCoroutine("SetBoolToFalse");
+            Debug.Log("it trigger");
+            if (!alreadyPlayed)
+            {
+                source.pitch = Random.Range(lowPitchRange, highPitchRange);
+                GetComponent<AudioSource>().Play();
+                alreadyPlayed = true;
+                
+            }
         }
       
     }
-    
+
+
+    private void OnTriggerExit(Collider other)
+    {
+       if(other.tag == "Player")
+        {
+            alreadyPlayed = false;
+        }
+    }
+
 
     private IEnumerator SetBoolToFalse()
     {

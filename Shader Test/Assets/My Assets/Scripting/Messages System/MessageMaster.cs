@@ -17,7 +17,10 @@ public class MessageMaster : MonoBehaviour {
     void Start () {
 
         rivenMessages = new Queue<string>();
-        StartRiven(0);
+        if (rivenText != null)
+        {
+            StartRiven(0);
+        }
 	}
 	
 	// Update is called once per frame

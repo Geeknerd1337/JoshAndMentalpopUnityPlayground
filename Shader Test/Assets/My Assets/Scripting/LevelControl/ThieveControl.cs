@@ -44,7 +44,11 @@ public class ThieveControl : MonoBehaviour
     {
         lastMinute = 0;
         endTrigger = false;
-        endText.text = "";
+
+        if (endText != null)
+        {
+            endText.text = "";
+        }
 
 
 
