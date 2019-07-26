@@ -105,6 +105,7 @@
     <Compile Include="Assets\My Assets\Scripting\Interactivity\Interact.cs" />
     <Compile Include="Assets\My Assets\Scripting\Interactivity\Interactable.cs" />
     <Compile Include="Assets\My Assets\Scripting\Interactivity\ItemPickup.cs" />
+    <Compile Include="Assets\My Assets\Scripting\Interactivity\WasherFritz.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\Inventory.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\InventorySlot.cs" />
     <Compile Include="Assets\My Assets\Scripting\Inventory\InventoryUI.cs" />

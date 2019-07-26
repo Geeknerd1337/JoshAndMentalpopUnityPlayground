@@ -77,7 +77,7 @@ public class Sense : MonoBehaviour
     public void CycleTarget()
     {
         AddAllTargets();
-        if(targets.Count > 0)
+        if(targets.Count > 0 && targets[index].gameObject.GetComponent<Outline>() != null)
         {
             targets[index].gameObject.GetComponent<Outline>().enabled = true;
 
