@@ -69,12 +69,12 @@ public class ThieveControl : MonoBehaviour
                 if (checkItems())
                 {
                     player.enabled = false;
-                    endText.text = "I'mma crown you \nKing of Thieves!";
+                    endText.text = "Our house'll be loaded with treasures!";
                 }
                 else
                 {
                     player.enabled = false;
-                    endText.text = "Failure, you are a \nFAILURE.";
+                    endText.text = "Next time: more stuff!";
                 }
                 endTrigger = true;
             }

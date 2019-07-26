@@ -627,6 +627,14 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
                     PageDownCanvas();
                     Event.current.Use();
                 }
+                else if (Event.current.keyCode == KeyCode.Return || Event.current.keyCode == KeyCode.KeypadEnter)
+                {
+                    if (string.Equals(GUI.GetNameOfFocusedControl(), "SearchTextField"))
+                    {
+                        // Find next search result if press enter in search text field:
+                        SearchDialogueTree(1);
+                    }
+                }
                 else if (Event.current.keyCode == KeyCode.Delete || Event.current.keyCode == KeyCode.Backspace)
                 {
                     // Delete/backspace key:

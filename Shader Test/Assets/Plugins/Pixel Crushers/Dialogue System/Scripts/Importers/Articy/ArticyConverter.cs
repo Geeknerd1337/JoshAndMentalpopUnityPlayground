@@ -200,10 +200,10 @@ namespace PixelCrushers.DialogueSystem.Articy
                 onProgressCallback("Converting non-dialogue elements", 0.01f);
                 Setup(articyData, prefs, template, database);
                 ConvertProjectAttributes();
+                ConvertVariables();
                 ConvertEntities();
                 ConvertLocations();
                 ConvertFlowFragmentsToQuests();
-                ConvertVariables();
                 ConvertDialogues();
                 ResetArticyIdIndex();
                 ConvertEmVarSet();

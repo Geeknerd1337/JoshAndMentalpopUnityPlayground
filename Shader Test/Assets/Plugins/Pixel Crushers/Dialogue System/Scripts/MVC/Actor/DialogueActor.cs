@@ -60,11 +60,17 @@ namespace PixelCrushers.DialogueSystem
             [Tooltip("The panel to use if Subtitle Panel Number is set to Custom.")]
             public StandardUISubtitlePanel customSubtitlePanel = null;
 
+            [Tooltip("If instantiating subtitle panel prefab, offset it this far from Dialogue Actor's origin.")]
+            public Vector3 customSubtitlePanelOffset = new Vector3(0, 0, 0);
+
             [Tooltip("If using Standard Dialogue UI, menu panel to use for this actor.")]
             public MenuPanelNumber menuPanelNumber = MenuPanelNumber.Default;
 
             [Tooltip("The panel to use if Menu Panel Number is set to Custom.")]
             public StandardUIMenuPanel customMenuPanel = null;
+
+            [Tooltip("If instantiating menu panel prefab, offset it this far from Dialogue Actor's origin.")]
+            public Vector3 customMenuPanelOffset = new Vector3(0, 0, 0);
 
             [Tooltip("If Only Me, only use this menu panel when this Dialogue Actor is the respondent.\nIf MeAndResponsesToMe, use this menu panel when this Dialogue Actor is the response or the character being responded to (i.e., the last one to speak).")]
             public UseMenuPanelFor useMenuPanelFor = UseMenuPanelFor.OnlyMe;
@@ -120,6 +126,8 @@ namespace PixelCrushers.DialogueSystem
                 // Instantiate subtitle panel from prefab:
                 var go = Instantiate(standardDialogueUISettings.customSubtitlePanel.gameObject, transform.position, transform.rotation) as GameObject;
                 go.transform.SetParent(transform);
+                go.transform.localPosition = standardDialogueUISettings.customSubtitlePanelOffset;
+                go.transform.localRotation = Quaternion.identity;
                 standardDialogueUISettings.customSubtitlePanel = go.GetComponent<StandardUISubtitlePanel>();
             }
             if (standardDialogueUISettings.menuPanelNumber == MenuPanelNumber.Custom &&
@@ -129,6 +137,8 @@ namespace PixelCrushers.DialogueSystem
                 // Instantiate menu panel from prefab:
                 var go = Instantiate(standardDialogueUISettings.customMenuPanel.gameObject, transform.position, transform.rotation) as GameObject;
                 go.transform.SetParent(transform);
+                go.transform.localPosition = standardDialogueUISettings.customMenuPanelOffset;
+                go.transform.localRotation = Quaternion.identity;
                 standardDialogueUISettings.customMenuPanel = go.GetComponent<StandardUIMenuPanel>();
             }
         }
@@ -163,7 +173,7 @@ namespace PixelCrushers.DialogueSystem
             var actorName = string.IsNullOrEmpty(actor) ? name : actor;
             var result = CharacterInfo.GetLocalizedDisplayNameInDatabase(DialogueLua.GetActorField(actorName, "Name").asString);
             if (!string.IsNullOrEmpty(result)) actorName = result;
-            if (actorName.Contains("[lua") || actor.Contains("[var"))
+            if (actorName.Contains("[lua") || actorName.Contains("[var"))
             {
                 return FormattedText.Parse(actorName, DialogueManager.masterDatabase.emphasisSettings).text;
             }

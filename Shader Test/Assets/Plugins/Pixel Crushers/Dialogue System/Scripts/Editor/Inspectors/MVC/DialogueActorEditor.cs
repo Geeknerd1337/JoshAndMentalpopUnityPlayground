@@ -50,12 +50,14 @@ namespace PixelCrushers.DialogueSystem
                 if (subtitlePanelNumberProperty.enumValueIndex == (int)SubtitlePanelNumber.Custom)
                 {
                     EditorGUILayout.PropertyField(standardUISettingsProperty.FindPropertyRelative("customSubtitlePanel"), true);
+                    EditorGUILayout.PropertyField(standardUISettingsProperty.FindPropertyRelative("customSubtitlePanelOffset"), true);
                 }
                 var menuPanelNumberProperty = standardUISettingsProperty.FindPropertyRelative("menuPanelNumber");
                 EditorGUILayout.PropertyField(menuPanelNumberProperty, true);
                 if (menuPanelNumberProperty.enumValueIndex == (int)MenuPanelNumber.Custom)
                 {
                     EditorGUILayout.PropertyField(standardUISettingsProperty.FindPropertyRelative("customMenuPanel"), true);
+                    EditorGUILayout.PropertyField(standardUISettingsProperty.FindPropertyRelative("customMenuPanelOffset"), true);
                 }
                 if (menuPanelNumberProperty.enumValueIndex != (int)MenuPanelNumber.Default)
                 {

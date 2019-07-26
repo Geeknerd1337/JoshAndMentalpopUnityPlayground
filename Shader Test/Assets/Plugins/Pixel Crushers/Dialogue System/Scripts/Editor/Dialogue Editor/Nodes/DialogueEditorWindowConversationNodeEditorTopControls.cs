@@ -247,7 +247,7 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
         private void DrawNodeEditorConversationPopup()
         {
             if (conversationTitles == null) conversationTitles = GetConversationTitles();
-            int newIndex = EditorGUILayout.Popup(conversationIndex, conversationTitles, GUILayout.Height(30));
+            int newIndex = EditorGUILayout.Popup(conversationIndex, conversationTitles, GUILayout.Height(EditorGUIUtility.singleLineHeight));
             if (newIndex != conversationIndex)
             {
                 SetConversationDropdownIndex(newIndex);

@@ -305,7 +305,12 @@ namespace PixelCrushers
                 for (int i = 0; i < listenerInfo.Count; i++)
                 {
                     var x = listenerInfo[i];
-                    if (x.removed) continue;
+                    if (x == null || x.removed) continue;
+                    if (x.listener == null)
+                    {
+                        x.removed = true;
+                        continue;
+                    }
                     if (string.Equals(x.message, message) && (string.Equals(x.parameter, parameter) || string.IsNullOrEmpty(x.parameter)))
                     {
                         try

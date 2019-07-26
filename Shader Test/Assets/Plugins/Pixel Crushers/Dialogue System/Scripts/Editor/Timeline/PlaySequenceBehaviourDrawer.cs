@@ -1,3 +1,4 @@
+#if USE_TIMELINE
 #if UNITY_2017_1_OR_NEWER
 using UnityEditor;
 using UnityEngine;
@@ -20,4 +21,5 @@ namespace PixelCrushers.DialogueSystem
         }
     }
 }
+#endif
 #endif

@@ -32,7 +32,7 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
         private static Canvas faderCanvas = null;
         private static UnityEngine.UI.Image faderImage = null;
 
-        public void Start()
+        public void Awake()
         {
             // Get the values of the parameters:
             direction = GetParameter(0);

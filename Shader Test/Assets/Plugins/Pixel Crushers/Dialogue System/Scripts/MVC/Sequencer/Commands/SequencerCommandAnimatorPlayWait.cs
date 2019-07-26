@@ -46,7 +46,7 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
                 }
                 else
                 {
-                    animator.CrossFade(stateName, crossfadeDuration, layer);
+                    animator.CrossFadeInFixedTime(stateName, crossfadeDuration, layer);
                 }
                 StartCoroutine(MonitorState(animator, stateName));
             }

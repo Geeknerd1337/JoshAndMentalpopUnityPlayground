@@ -17,6 +17,7 @@ namespace PixelCrushers.DialogueSystem
 
         // The built-in subtitle panels assigned to the StandardDialogueUI:
         private List<StandardUISubtitlePanel> m_builtinPanels = new List<StandardUISubtitlePanel>();
+        private List<StandardUISubtitlePanel> m_customPanels = new List<StandardUISubtitlePanel>();
         private StandardUISubtitlePanel m_defaultNPCPanel = null;
         private StandardUISubtitlePanel m_defaultPCPanel = null;
 
@@ -25,9 +26,6 @@ namespace PixelCrushers.DialogueSystem
 
         // After we look up which panel an actor uses, we cache the value so we don't need to look it up again:
         private Dictionary<Transform, StandardUISubtitlePanel> m_actorPanelCache = new Dictionary<Transform, StandardUISubtitlePanel>();
-
-        // If a entry overrides the actor's panel using the [panel=#] tag, we record it here so we know to hide the panel when we switch back:
-        private Dictionary<Transform, StandardUISubtitlePanel> m_actorOverridePanel = new Dictionary<Transform, StandardUISubtitlePanel>();
 
         // If the speaker has no DialogueActor, we can also override by actor ID:
         private Dictionary<int, StandardUISubtitlePanel> m_actorIdOverridePanel = new Dictionary<int, StandardUISubtitlePanel>();
@@ -73,7 +71,7 @@ namespace PixelCrushers.DialogueSystem
         private void ClearCache()
         {
             m_actorPanelCache.Clear();
-            m_actorOverridePanel.Clear();
+            m_customPanels.Clear();
             m_actorIdOverridePanel.Clear();
             m_lastPanelUsedByActor.Clear();
             m_lastActorToUsePanel.Clear();
@@ -165,6 +163,7 @@ namespace PixelCrushers.DialogueSystem
                 case SubtitlePanelNumber.Default:
                     return null;
                 case SubtitlePanelNumber.Custom:
+                    if (!m_customPanels.Contains(customPanel)) m_customPanels.Add(customPanel);
                     return customPanel;
                 case SubtitlePanelNumber.UseBarkUI:
                     return null;
@@ -307,9 +306,15 @@ namespace PixelCrushers.DialogueSystem
 
         protected virtual void SupercedeOtherPanels(StandardUISubtitlePanel newPanel)
         {
-            for (int i = 0; i < m_builtinPanels.Count; i++)
+            SupercedeOtherPanelsInList(m_builtinPanels, newPanel);
+            SupercedeOtherPanelsInList(m_customPanels, newPanel);
+        }
+
+        protected virtual void SupercedeOtherPanelsInList(List<StandardUISubtitlePanel> list, StandardUISubtitlePanel newPanel)
+        { 
+            for (int i = 0; i < list.Count; i++)
             {
-                var panel = m_builtinPanels[i];
+                var panel = list[i];
                 if (panel == null || panel == newPanel) continue;
                 if (panel.isOpen)
                 {

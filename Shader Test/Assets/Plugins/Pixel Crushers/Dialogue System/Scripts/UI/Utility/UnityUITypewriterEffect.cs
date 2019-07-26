@@ -256,7 +256,7 @@ namespace PixelCrushers.DialogueSystem
                 openTokenTypes = new List<TokenType>();
                 current = new StringBuilder();
                 int safeguard = 0;
-                while (tokens.Count > 0 && safeguard < 10000) //!!!
+                while (tokens.Count > 0 && safeguard < 10000)
                 {
                     safeguard++;
                     if (!paused)

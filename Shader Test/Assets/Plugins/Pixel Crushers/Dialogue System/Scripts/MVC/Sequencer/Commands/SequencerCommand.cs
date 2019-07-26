@@ -18,7 +18,7 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
         /// <value>
         /// <c>true</c> if this instance is still playing; otherwise, <c>false</c>.
         /// </value>
-        public bool isPlaying { get; protected set; }
+        [HideInInspector] public bool isPlaying = true;
 
         /// <summary>
         /// Reference to the Sequencer, so you can access its properties such as SequencerCamera
@@ -27,7 +27,16 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
         /// <value>
         /// The sequencer.
         /// </value>
-        protected Sequencer sequencer { get; private set; }
+        protected Sequencer sequencer
+        {
+            get
+            {
+                if (m_sequencer == null) m_sequencer = Sequencer.s_awakeSequencer;
+                return m_sequencer;
+            }
+            private set { m_sequencer = value; }
+        }
+        private Sequencer m_sequencer = null;
 
         /// <summary>
         /// The parameters for the command.
@@ -35,14 +44,32 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
         /// <value>
         /// The parameters.
         /// </value>
-        protected string[] parameters { get; private set; }
+        protected string[] parameters
+        {
+            get
+            {
+                if (m_parameters == null) m_parameters = Sequencer.s_awakeArgs;
+                return m_parameters;
+            }
+            private set { m_parameters = value; }
+        }
+        private string[] m_parameters = null;
 
         /// <summary>
         /// Optional message to send the sequencer when the command completes. The sequencer
         /// sends this message. The command itself is not responsible for sending it.
         /// </summary>
         /// <value>The end message.</value>
-        public string endMessage { get; private set; }
+        public string endMessage
+        {
+            get
+            {
+                if (m_endMessage == null) m_endMessage = Sequencer.s_awakeEndMessage;
+                return m_endMessage;
+            }
+            private set { m_endMessage = value; }
+        }
+        private string m_endMessage = null;
 
         private Transform m_speaker = null;
         protected Transform speaker { get { return (m_speaker != null) ? m_speaker : (Sequencer != null) ? Sequencer.Speaker : null; } }
@@ -73,7 +100,6 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
             this.parameters = parameters;
             this.m_speaker = speaker;
             this.m_listener = listener;
-            isPlaying = true;
         }
 
         /// <summary>

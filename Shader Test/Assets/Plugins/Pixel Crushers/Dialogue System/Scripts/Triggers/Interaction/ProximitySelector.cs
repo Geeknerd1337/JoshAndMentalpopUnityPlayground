@@ -183,7 +183,7 @@ namespace PixelCrushers.DialogueSystem
 #if USE_PHYSICS2D || !UNITY_2018_1_OR_NEWER
             if (!found && GetComponent<Collider2D>() != null) found = true;
 #endif
-            if (!found && DialogueDebug.logWarnings) Debug.LogWarning("Dialogue System: Proximity Selector requires a collider, but it has no collider component.", this);
+            if (!found && DialogueDebug.logWarnings) Debug.LogWarning("Dialogue System: Proximity Selector requires a collider, but it has no collider component. If your project is 2D, did you enable 2D support? (Tools > Pixel Crushers > Dialogue System > Welcome Window)", this);
         }
 
         public virtual void OnConversationStart(Transform actor)
@@ -206,8 +206,8 @@ namespace PixelCrushers.DialogueSystem
 
             //--- Replaced by OnConversationStart: if (DialogueManager.isConversationActive) timeToEnableUseButton = Time.time + MinTimeBetweenUseButton;
 
-            // If the currentUsable went missing (was destroyed or we changed scene), tell listeners:
-            if (toldListenersHaveUsable && currentUsable == null)
+            // If the currentUsable went missing (was destroyed, deactivated, or we changed scene), tell listeners:
+            if (toldListenersHaveUsable && (currentUsable == null || !currentUsable.gameObject.activeInHierarchy))
             {
                 SetCurrentUsable(null);
                 OnDeselectedUsableObject(null);

@@ -5,6 +5,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_5_5_OR_NEWER || UNITY_2017_OR_NEWER
+using UnityEngine.AI;
+#endif
 
 namespace PixelCrushers.DialogueSystem
 {
@@ -664,6 +667,15 @@ namespace PixelCrushers.DialogueSystem
             return DialogueTime.isPaused;
         }
 
+        /// <summary>
+        /// SequencerCommand can refer to these if they run in Awake.
+        /// </summary>
+        public static Sequencer s_awakeSequencer;
+        public static string s_awakeEndMessage;
+        public static Transform s_awakeSpeaker;
+        public static Transform s_awakeListener;
+        public static string[] s_awakeArgs;
+
         private void ActivateCommand(string commandName, string endMessage, Transform speaker, Transform listener, string[] args)
         {
             float duration = 0;
@@ -678,6 +690,11 @@ namespace PixelCrushers.DialogueSystem
             else
             {
                 System.Type componentType = FindSequencerCommandType(commandName);
+                s_awakeSequencer = this;
+                s_awakeEndMessage = endMessage;
+                s_awakeSpeaker = speaker;
+                s_awakeListener = listener;
+                s_awakeArgs = args;
                 SequencerCommand command = (componentType == null) ? null : gameObject.AddComponent(componentType) as SequencerCommand;
                 if (command != null)
                 {
@@ -929,6 +946,10 @@ namespace PixelCrushers.DialogueSystem
             else if (string.Equals(commandName, "LookAt"))
             {
                 return TryHandleLookAtInternally(commandName, args);
+            }
+            else if (string.Equals(commandName, "NavMeshAgent"))
+            {
+                return HandleNavMeshAgentInternally(commandName, args);
             }
             else if (string.Equals(commandName, "SendMessage"))
             {
@@ -1362,7 +1383,7 @@ namespace PixelCrushers.DialogueSystem
                     }
                     else
                     {
-                        animator.CrossFade(stateName, crossfadeDuration, layer);
+                        animator.CrossFadeInFixedTime(stateName, crossfadeDuration, layer);
                     }
                 }
             }
@@ -1544,6 +1565,43 @@ namespace PixelCrushers.DialogueSystem
             {
                 subject.LookAt(position);
             }
+        }
+
+        /// <summary>
+        /// Handles NavMeshAgent(stop|destination, [agent])
+        /// 
+        /// - stop|destination: 'stop' stops the agent. Otherwise specify a destination GameObject.
+        /// - agent: NavMeshAgent GameObject. Default: speaker.
+        /// </summary>
+        private bool HandleNavMeshAgentInternally(string commandName, string[] args)
+        {
+            var stop = string.Equals(SequencerTools.GetParameter(args, 0), "stop", System.StringComparison.OrdinalIgnoreCase);
+            var destination = stop ? null : SequencerTools.GetSubject(SequencerTools.GetParameter(args, 0), m_speaker, m_listener);
+            var subject = SequencerTools.GetSubject(SequencerTools.GetParameter(args, 1), m_speaker, m_listener);
+#if UNITY_5_3 || UNITY_5_4
+            var navMeshAgent = (subject != null) ? subject.GetComponent<NavMeshAgent>() : null;
+#else
+            var navMeshAgent = (subject != null) ? subject.GetComponent<UnityEngine.AI.NavMeshAgent>() : null;
+#endif
+            if (!stop && destination == null)
+            {
+                if (DialogueDebug.logWarnings) Debug.LogWarning("Dialogue System: Sequencer: NavMeshAgent(" + SequencerTools.GetParameter(args, 0) + "," + SequencerTools.GetParameter(args, 1) + "): Destination not found.");
+            }
+            else if (navMeshAgent == null)
+            {
+                if (DialogueDebug.logWarnings) Debug.LogWarning("Dialogue System: Sequencer: NavMeshAgent(" + SequencerTools.GetParameter(args, 0) + "," + SequencerTools.GetParameter(args, 1) + "): NavMeshAgent subject not found.");
+            }
+            else
+            {
+                if (DialogueDebug.logInfo) Debug.Log("Dialogue System: Sequencer: NavMeshAgent(" + SequencerTools.GetParameter(args, 0) + "," + SequencerTools.GetParameter(args, 1) + ")");
+                if (!stop) navMeshAgent.SetDestination(destination.position);
+#if UNITY_5_3 || UNITY_5_4
+                if (stop) navMeshAgent.Stop();
+#else
+                navMeshAgent.isStopped = stop;
+#endif
+            }
+            return true;
         }
 
         /// <summary>

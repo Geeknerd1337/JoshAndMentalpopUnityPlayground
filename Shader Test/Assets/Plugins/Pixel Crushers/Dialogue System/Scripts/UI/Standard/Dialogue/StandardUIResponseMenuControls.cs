@@ -82,8 +82,7 @@ namespace PixelCrushers.DialogueSystem
             var playerTransform = (lastSubtitle != null && lastSubtitle.speakerInfo.isPlayer) ? lastSubtitle.speakerInfo.transform
                 : (responses != null && responses.Length > 0) ? GetActorTransformFromID(responses[0].destinationEntry.ActorID)
                 : DialogueManager.currentActor;
-
-            //var playerTransform = (lastSubtitle != null && lastSubtitle.speakerInfo.isPlayer) ? lastSubtitle.speakerInfo.transform : DialogueManager.currentActor;
+            if (playerTransform == null) playerTransform = DialogueManager.currentActor;
 
             if (playerTransform == null) return m_defaultPanel;
             if (m_actorPanelCache.ContainsKey(playerTransform)) return m_actorPanelCache[playerTransform];

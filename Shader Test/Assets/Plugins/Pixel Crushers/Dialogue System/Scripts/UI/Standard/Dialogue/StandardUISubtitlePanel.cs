@@ -264,6 +264,7 @@ namespace PixelCrushers.DialogueSystem
             Tools.SetGameObjectActive(continueButton, true);
             if (continueButton != null && continueButton.onClick.GetPersistentEventCount() == 0)
             {
+                continueButton.onClick.RemoveAllListeners();
                 var fastForward = continueButton.GetComponent<StandardUIContinueButtonFastForward>();
                 if (fastForward != null)
                 {
