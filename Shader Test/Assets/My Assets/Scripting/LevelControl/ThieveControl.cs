@@ -50,7 +50,7 @@ public class ThieveControl : MonoBehaviour
             endText.text = "";
         }
 
-
+        Cursor.visible = false;
 
     }
 
