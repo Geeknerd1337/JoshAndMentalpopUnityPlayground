@@ -13,6 +13,8 @@ namespace PixelCrushers
     public class DiskSavedGameDataStorerEditor : Editor
     {
 
+#if !(UNITY_WEBGL || UNITY_WSA)
+
         private const int MaxSlots = 100;
 
         private List<string> m_files;
@@ -81,31 +83,10 @@ namespace PixelCrushers
         {
             if (!(0 <= index && index < m_files.Count)) return;
             var key = m_files[index];
-            //int buttonWidth = 48;
-            //var keyRect = new Rect(rect.x, rect.y + 1, rect.width - buttonWidth, EditorGUIUtility.singleLineHeight);
-            //var showRect = new Rect(rect.x + rect.width - buttonWidth, rect.y + 1, buttonWidth, EditorGUIUtility.singleLineHeight);
             EditorGUI.BeginDisabledGroup(true);
-            EditorGUI.TextField(rect, key); //EditorGUI.TextField(keyRect, key);
+            EditorGUI.TextField(rect, key);
             EditorGUI.EndDisabledGroup();
-            //EditorGUI.BeginDisabledGroup(string.Equals(key, EmptySlotString));
-            //if (GUI.Button(showRect, "Show"))
-            //{
-            //    Debug.Log(key + ": " + PlayerPrefs.GetString(key));
-            //}
-            //EditorGUI.EndDisabledGroup();
         }
-
-        //private void OnRemoveElement(ReorderableList list)
-        //{
-        //    if (!(0 <= list.index && list.index < m_files.Count)) return;
-        //    var key = m_files[list.index];
-        //    if (EditorUtility.DisplayDialog("Delete Saved Game", "Delete saved game " + key + "?", "OK", "Cancel"))
-        //    {
-        //        PlayerPrefs.DeleteKey(key);
-        //        m_files[list.index] = EmptySlotString;
-        //    }
-        //}
-
 
         private void ClearSavedGames()
         {
@@ -117,6 +98,16 @@ namespace PixelCrushers
             m_files.Clear();
             Repaint();
         }
+
+#else
+
+        public override void OnInspectorGUI()
+        {
+            EditorGUILayout.HelpBox("DiskSavedGameDataStorer is not supported on this build platform.", MessageType.Warning);
+            base.OnInspectorGUI();
+        }
+
+#endif
 
     }
 

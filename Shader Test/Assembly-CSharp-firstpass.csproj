@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_14;UNITY_2018_3;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;AMPLIFY_SHADER_EDITOR;CROSS_PLATFORM_INPUT;USE_INVECTOR_FREE;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_14;UNITY_2018_3;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;AMPLIFY_SHADER_EDITOR;CROSS_PLATFORM_INPUT;USE_INVECTOR_FREE;TMP_PRESENT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -802,6 +802,90 @@
     <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\Utility\ConversationPositionStack.cs" />
     <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\Utility\LuaConsole.cs" />
     <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\Utility\LuaNetworkCommands.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\More Examples\Farmer Example\Scripts\FarmAI.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\More Examples\Farmer Example\Scripts\FarmSpawner.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\Scripts\DeedToolbar.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\Scripts\InteractionUI.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\Scripts\Mover2D.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\Scripts\NPC.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\Scripts\RudimentaryPlayerController2D.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Database\Faction.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Database\FactionDatabase.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Database\FactionInheritanceType.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Database\Preset.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Database\Relationship.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Database\TraitDefinition.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Database\Traits.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Deed.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Emotions\EmotionalState.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Emotions\EmotionDefinition.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Emotions\EmotionModel.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\FactionManager.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\FactionMember.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\IForgetDeedEventHandler.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\IModifyPadEventHandler.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\IRememberDeedEventHandler.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\IShareRumorsEventHandler.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\IWitnessDeedEventHandler.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\LoveHate.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Pad.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Rumor.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Savers\FactionManagerSaver.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Savers\FactionMemberSaver.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\StabilizePAD.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Temperament.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Vision\CanSeeAdvanced.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\Vision\FieldOfView.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Core\Faction Members\WitnessQueueItem.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Aura\AbstractAuraTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Aura\AuraTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Aura\AuraTrigger2D.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Aura\IAuraEventHandler.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Aura\IEnterAuraEventHandler.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Deeds\DeedEvaluationOverrides.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Deeds\DeedReporter.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Deeds\DeedTemplate.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Deeds\DeedTemplateLibrary.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Gossip\AbstractGossipTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Gossip\GossipAnimation.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Gossip\GossipTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Gossip\GossipTrigger2D.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Gossip\IGossipEventHandler.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Greeting\AbstractGreetingAnimationTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Greeting\AbstractGreetingTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Greeting\GreetingTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Greeting\GreetingTrigger2D.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Greeting\IGreetEventHandler.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Misc\AbstractTriggerInteractor.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Misc\DeedReactionEvents.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Misc\FactionMemberDebugger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Misc\FactionMemberDebuggerCanvas.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Misc\FactionMemberEvents.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\Interaction\Misc\RangeAnimation.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Database\FactionDatabase.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Database\Traits.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Members\CanSeeAdvanced.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Members\EmotionalState.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Members\EmotionModel.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Members\FactionManager.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Members\FactionManagerSaver.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Members\FactionMember.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Members\FactionMemberSaver.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Core\Faction Members\StabilizePAD.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Aura\AuraTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Aura\AuraTrigger2D.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Deeds\DeedEvaluationOverrides.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Deeds\DeedReporter.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Deeds\DeedTemplateLibrary.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Gossip\GossipAnimation.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Gossip\GossipTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Gossip\GossipTrigger2D.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Greeting\GreetingTrigger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Greeting\GreetingTrigger2D.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Misc\DeedReactionEvents.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Misc\FactionMemberDebugger.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Misc\FactionMemberDebuggerCanvas.cs" />
+    <Compile Include="Assets\Plugins\Pixel Crushers\LoveHate\Wrappers\Interaction\Misc\FactionMemberEvents.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
@@ -890,6 +974,7 @@
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Templates\Link\_README.txt" />
+    <None Include="Assets\Plugins\Pixel Crushers\LoveHate\Templates\_README.txt" />
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Prefabs\Deprecated\Legacy Unity GUI Prefabs\Computer\Bitwise Font\!license.txt" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
@@ -924,7 +1009,9 @@
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Prefabs\Deprecated\Legacy Unity GUI Prefabs\Shared Audio\_README.txt" />
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Prefabs\Camera Angle Studio\_README.txt" />
+    <None Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\More Examples\Multiplayer Example\_README.txt" />
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Prefabs\Deprecated\Unity UI Prefabs\_README.txt" />
+    <None Include="Assets\Plugins\Pixel Crushers\LoveHate\_README.txt" />
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
@@ -936,6 +1023,7 @@
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
+    <None Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\Art\PlanetCute\_README.txt" />
     <None Include="Assets\Plugins\Pixel Crushers\Common\_README.txt" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
@@ -951,7 +1039,9 @@
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Templates\Link\link.xml" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
+    <None Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\More Examples\Farmer Example\Art\_README.txt" />
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Prefabs\Deprecated\Legacy Unity GUI Prefabs\Necromancer\Necromancer GUI\Readme.txt" />
+    <None Include="Assets\Plugins\Pixel Crushers\LoveHate\_RELEASE_NOTES.txt" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\_README.txt" />
@@ -966,6 +1056,7 @@
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Prefabs\Deprecated\Legacy Unity GUI Prefabs\Wheel\_README.txt" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\Plugins\Pixel Crushers\LoveHate\Example\More Examples\Farmer Example\_README.txt" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
@@ -996,6 +1087,7 @@
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\Shaders\LinesColoredBlended.shader" />
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Prefabs\Art\Textures\UnityUI\_README.txt" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
+    <None Include="Assets\Plugins\Pixel Crushers\LoveHate\Scripts\_README.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
     <None Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\Deprecated\_README.txt" />

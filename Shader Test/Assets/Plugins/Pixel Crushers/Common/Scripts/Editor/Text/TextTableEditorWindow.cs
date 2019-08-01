@@ -83,11 +83,21 @@ namespace PixelCrushers
 
         private const string EncodingTypeEditorPrefsKey = "PixelCrushers.EncodingType";
         private const string ToolbarSelectionPrefsKey = "PixelCrushers.TextTableEditor.Toolbar";
+        private const string SearchBarPrefsKey = "PixelCrushers.TextTableEditor.SearchBar";
         private const double TimeBetweenUpdates = 10;
 
         private bool m_needToUpdateSO;
         private bool m_needToApplyBeforeUpdateSO;
         private System.DateTime m_lastApply;
+
+        [System.Serializable]
+        public class SearchBarSettings
+        {
+            public bool open = false;
+            public string searchString = string.Empty;
+            public string replaceString = string.Empty;
+            public bool matchCase = false;
+        }
 
         #endregion
 
@@ -104,6 +114,17 @@ namespace PixelCrushers
             Undo.undoRedoPerformed += Repaint;
             if (m_textTableInstanceID != 0) Selection.activeObject = EditorUtility.InstanceIDToObject(m_textTableInstanceID);
             m_toolbarSelection = EditorPrefs.GetInt(ToolbarSelectionPrefsKey, 0);
+            if (EditorPrefs.HasKey(SearchBarPrefsKey))
+            {
+                var searchBarSettings = JsonUtility.FromJson<SearchBarSettings>(EditorPrefs.GetString(SearchBarPrefsKey));
+                if (searchBarSettings != null)
+                {
+                    m_isSearchPanelOpen = searchBarSettings.open;
+                    m_searchString = searchBarSettings.searchString;
+                    m_replaceString = searchBarSettings.replaceString;
+                    m_matchCase = searchBarSettings.matchCase;
+                }
+            }
             OnSelectionChange();
         }
 
@@ -113,6 +134,12 @@ namespace PixelCrushers
             s_instance = null;
             Undo.undoRedoPerformed -= Repaint;
             EditorPrefs.SetInt(ToolbarSelectionPrefsKey, m_toolbarSelection);
+            var searchBarSettings = new SearchBarSettings();
+            searchBarSettings.open = m_isSearchPanelOpen;
+            searchBarSettings.searchString = m_searchString;
+            searchBarSettings.replaceString = m_replaceString;
+            searchBarSettings.matchCase = m_matchCase;
+            EditorPrefs.SetString(SearchBarPrefsKey, JsonUtility.ToJson(searchBarSettings));
         }
 
         private void OnSelectionChange()
@@ -158,12 +185,10 @@ namespace PixelCrushers
             {
                 if (m_needToApplyBeforeUpdateSO)
                 {
-                    //Debug.Log("ApplyBeforeUpdate at " + now);
                     m_serializedObject.ApplyModifiedProperties();
                     m_needToApplyBeforeUpdateSO = false;
                 }
                 m_needToUpdateSO = false;
-                //Debug.Log("Update at " + now);
                 m_serializedObject.Update();
             }
             var newToolbarSelection = GUILayout.Toolbar(m_toolbarSelection, ToolbarLabels);
@@ -184,7 +209,6 @@ namespace PixelCrushers
             if (elapsed > TimeBetweenUpdates)
             {
                 m_lastApply = now;
-                //Debug.Log("Apply at " + now);
                 m_serializedObject.ApplyModifiedProperties();
                 m_needToApplyBeforeUpdateSO = false;
             }
@@ -313,14 +337,15 @@ namespace PixelCrushers
         private void DrawFieldsTab()
         {
             DrawGrid();
+            DrawEntryBox();
             if (m_isSearchPanelOpen)
             {
                 DrawSearchPanel();
             }
-            else
-            {
-                DrawEntryBox();
-            }
+            //else
+            //{
+            //    DrawEntryBox();
+            //}
         }
 
         private const float MinColumnWidth = 100;
@@ -348,8 +373,8 @@ namespace PixelCrushers
             if (m_textTable == null) return;
             try
             {
-                var entryBoxHeight = IsAnyFieldSelected() ? (6 * EditorGUIUtility.singleLineHeight)
-                    : m_isSearchPanelOpen ? (5 * EditorGUIUtility.singleLineHeight) : 0;
+                var entryBoxHeight = IsAnyFieldSelected() ? (6 * EditorGUIUtility.singleLineHeight) : 0;
+                if (m_isSearchPanelOpen) entryBoxHeight += (4 * EditorGUIUtility.singleLineHeight);
                 GUILayout.BeginArea(new Rect(0, 2 * (EditorGUIUtility.singleLineHeight + 4), position.width,
                     position.height - (2 * (EditorGUIUtility.singleLineHeight + 4) + 4) - entryBoxHeight));
                 m_fieldListScrollPosition = GUILayout.BeginScrollView(m_fieldListScrollPosition, false, false);
@@ -555,6 +580,11 @@ namespace PixelCrushers
         {
             if (m_needRefreshLists || !IsAnyFieldSelected()) return;
             var rect = new Rect(2, position.height - 6 * EditorGUIUtility.singleLineHeight, position.width - 4, 6 * EditorGUIUtility.singleLineHeight);
+            if (m_isSearchPanelOpen)
+            {
+                var searchPanelHeight = (4 * EditorGUIUtility.singleLineHeight);
+                rect = new Rect(rect.x, rect.y - searchPanelHeight, rect.width, rect.height);
+            }
             var fieldValuesProperty = m_serializedObject.FindProperty("m_fieldValues");
             var fieldValueProperty = fieldValuesProperty.GetArrayElementAtIndex(m_fieldList.index);
             var keysProperty = fieldValueProperty.FindPropertyRelative("m_keys");
