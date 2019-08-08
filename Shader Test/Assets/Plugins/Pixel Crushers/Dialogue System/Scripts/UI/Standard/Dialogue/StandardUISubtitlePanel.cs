@@ -256,6 +256,7 @@ namespace PixelCrushers.DialogueSystem
 
         public virtual void ClearText()
         {
+            m_accumulatedText = string.Empty;
             subtitleText.text = string.Empty;
         }
 

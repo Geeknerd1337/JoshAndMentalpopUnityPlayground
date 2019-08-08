@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/My Assets/Scenes/Town.unity
+- path: Assets/Pixel Crushers/Dialogue System/Third Party Support/Cinemachine Support/Example/Cinemachine
+    Timeline Example.unity
   isLoaded: 1
   isActive: 1

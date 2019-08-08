@@ -324,6 +324,18 @@ namespace PixelCrushers.DialogueSystem
             return Regex.Replace(s, @"<b>|</b>|<i>|</i>|<color=[#]\w+>|</color>", string.Empty);
         }
 
+        public static string StripTextMeshProTags(string s)
+        {
+            if (!s.Contains("<")) return s;
+            return Regex.Replace(s, @"<b>|</b>|<i>|</i>|<color=#\w+>|<color=""\w+"">|</color>|" +
+                @"<align=\w+>|</align>|<font=\w+>|</font>|<indent=\w+[%]>|</indent>|" +
+                @"<line-height=\w+[%]>|</line-height>|<line-indent=\w+[%]>|</line-ident>|" +
+                @"<link=""[^""]+"">|</link>|<lowercase>|</lowercase>|<uppercase>|</uppercase>|" +
+                @"<smallcaps>|</smallcaps>|<margin=.+>|</margin>|<mark=#\w+>|</mark>|" +
+                @"<nobr>|</nobr>|<size=\w+[%]>|</size>|<sprite=.+>|<s>|</s>|<u>|</u>|" +
+                @"<sup>|</sup>|<sub>|</sub>", string.Empty);
+        }
+
         /// <summary>
         /// Determines whether an animation clip is in the animation list.
         /// </summary>

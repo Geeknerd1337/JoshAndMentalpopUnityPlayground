@@ -222,7 +222,7 @@ namespace PixelCrushers.DialogueSystem
             if ((textComponent != null) && (charactersPerSecond > 0))
             {
                 if (waitOneFrameBeforeStarting) yield return null;
-                fromIndex = Tools.StripRichTextCodes(textComponent.text.Substring(0, fromIndex)).Length;
+                fromIndex = Tools.StripTextMeshProTags(textComponent.text.Substring(0, fromIndex)).Length;
                 ProcessRPGMakerCodes();
                 if (runtimeAudioSource != null) runtimeAudioSource.clip = audioClip;
                 onBegin.Invoke();

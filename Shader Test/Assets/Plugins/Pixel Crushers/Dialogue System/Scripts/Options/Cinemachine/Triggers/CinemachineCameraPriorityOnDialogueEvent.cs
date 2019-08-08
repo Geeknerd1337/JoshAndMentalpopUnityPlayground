@@ -1,11 +1,10 @@
-﻿#if USE_CINEMACHINE
-#if UNITY_2017_1_OR_NEWER
+﻿
 using UnityEngine;
 
 namespace PixelCrushers.DialogueSystem
 {
 
-    [AddComponentMenu("")] // Use wrapper.
+    [AddComponentMenu("")] // Use wrapper. Cinemachine.CinemachineFreeLook freeLookCam;
     public class CinemachineCameraPriorityOnDialogueEvent : ActOnDialogueEvent
     {
 
@@ -31,5 +30,3 @@ namespace PixelCrushers.DialogueSystem
         }
     }
 }
-#endif
-#endif
